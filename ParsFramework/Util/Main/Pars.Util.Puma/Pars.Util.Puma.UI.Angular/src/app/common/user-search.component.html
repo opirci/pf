@@ -1,0 +1,21 @@
+﻿<div class="form-group">
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" style="height: 30px;" [(ngModel)]="SelectedUser.Name" class="form-control" />
+</div>
+<div style="z-index: 9999; margin-left: 80px; position: fixed; height: 200px; width: 250px;" *ngIf="Users" class="pre-scrollable">
+    <!--<div *ngFor="let user of Users" class="search-result" (click)="selectUser(user)">
+        {{user.Name}}
+    </div>-->
+    <table *ngIf="Users" class="table table-striped table-hover table-condensed table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of Users" (click)="selectUser(user)">
+                <td>{{ user.Name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

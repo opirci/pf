@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://lcwaikiki.com/2013/07/Pars/Util/Management" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://lcwaikiki.com/2013/07/Pars/Util/Management" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://lcwaikiki.com/2013/07/Pars/Util/Management/Imports">
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd0" namespace="http://lcwaikiki.com/2013/07/Pars/Util/Management" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Data" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Request" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Response" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Request" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Response" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Service" />
+      <xsd:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Domain" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserServicePublic_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ChangePassword_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q1:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckMail" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckMail_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q2:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreatePasswordResetRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePasswordResetRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreatePasswordResetRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePasswordResetRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreatePasswordResetRequest_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q3:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ValidatePasswordResetRequestUid_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePasswordResetRequestUid" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ValidatePasswordResetRequestUid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePasswordResetRequestUidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ValidatePasswordResetRequestUid_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q4:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DonePasswordResetRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DonePasswordResetRequest" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DonePasswordResetRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DonePasswordResetRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DonePasswordResetRequest_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q5:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserListByAssignedClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserListByAssignedClaims" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserListByAssignedClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserListByAssignedClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserListByAssignedClaims_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q6:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_MailListByAssignedClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailListByAssignedClaims" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_MailListByAssignedClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailListByAssignedClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_MailListByAssignedClaims_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q7:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserList" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UserList_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q8:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GenerateValidUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateValidUserName" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GenerateValidUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateValidUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GenerateValidUserName_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q9:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreateNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreateNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CreateNewUser_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q10:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserRef" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserRef_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q11:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserName_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q12:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserGuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserGuid" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserGuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByUserGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByUserGuid_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q13:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByHrPersonelRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByHrPersonelRef" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByHrPersonelRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByHrPersonelRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByHrPersonelRef_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q14:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMobile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMobile" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMobile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMobile_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q15:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMail" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserByMail_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q16:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserClaim" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaim_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q17:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserGroupClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserGroupClaim" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserGroupClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserGroupClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserGroupClaim_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q18:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetRoleClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleClaim" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetRoleClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRoleClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetRoleClaim_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q19:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserRole_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q20:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserUserGroup_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q21:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdatePersonelIDByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonelIDByUserName" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdatePersonelIDByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonelIDByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdatePersonelIDByUserName_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q22:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsLdapUserExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLdapUserExists" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsLdapUserExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLdapUserExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsLdapUserExists_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q23:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ChangeUserEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ChangeUserEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeUserEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_ChangeUserEmail_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q24:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetMembersOfUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembersOfUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetMembersOfUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMembersOfUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetMembersOfUserGroup_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q25:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaimsByUserRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserClaimsByUserRef" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaimsByUserRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserClaimsByUserRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaimsByUserRef_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q26:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserClaims" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserClaims_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q27:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserBasicInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBasicInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserBasicInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBasicInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUserBasicInfo_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q28:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsExists" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_IsExists_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q29:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUser_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q30:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaimByUserRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserClaimByUserRef" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaimByUserRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserClaimByUserRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserClaimByUserRef_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q31:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserClaim" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserClaim_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q32:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUsersByCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByCompany" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUsersByCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersByCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_GetUsersByCompany_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q33:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserPhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPhoto" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserPhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SetUserPhoto_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q34:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SpecifyUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:SpecifyUsername" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SpecifyUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SpecifyUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_SpecifyUsername_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q35:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserFromUserGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserFromUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserFromUserGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserFromUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_DeleteUserFromUserGroup_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q36:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckUserByHrPersonelRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserByHrPersonelRef" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckUserByHrPersonelRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserByHrPersonelRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_CheckUserByHrPersonelRef_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q37:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserServicePublic_UpdateUserInfo_StandardFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" name="detail" element="q38:StandardFaultContract" />
+  </wsdl:message>
+  <wsdl:portType name="IUserServicePublic">
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangePassword" message="tns:IUserServicePublic_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangePasswordResponse" message="tns:IUserServicePublic_ChangePassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangePasswordStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_ChangePassword_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMail">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckMail" message="tns:IUserServicePublic_CheckMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckMailResponse" message="tns:IUserServicePublic_CheckMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckMailStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_CheckMail_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePasswordResetRequest">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreatePasswordResetRequest" message="tns:IUserServicePublic_CreatePasswordResetRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreatePasswordResetRequestResponse" message="tns:IUserServicePublic_CreatePasswordResetRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreatePasswordResetRequestStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_CreatePasswordResetRequest_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePasswordResetRequestUid">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ValidatePasswordResetRequestUid" message="tns:IUserServicePublic_ValidatePasswordResetRequestUid_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ValidatePasswordResetRequestUidResponse" message="tns:IUserServicePublic_ValidatePasswordResetRequestUid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ValidatePasswordResetRequestUidStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_ValidatePasswordResetRequestUid_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DonePasswordResetRequest">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DonePasswordResetRequest" message="tns:IUserServicePublic_DonePasswordResetRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DonePasswordResetRequestResponse" message="tns:IUserServicePublic_DonePasswordResetRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DonePasswordResetRequestStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_DonePasswordResetRequest_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserListByAssignedClaims">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserListByAssignedClaims" message="tns:IUserServicePublic_UserListByAssignedClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserListByAssignedClaimsResponse" message="tns:IUserServicePublic_UserListByAssignedClaims_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserListByAssignedClaimsStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_UserListByAssignedClaims_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailListByAssignedClaims">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/MailListByAssignedClaims" message="tns:IUserServicePublic_MailListByAssignedClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/MailListByAssignedClaimsResponse" message="tns:IUserServicePublic_MailListByAssignedClaims_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/MailListByAssignedClaimsStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_MailListByAssignedClaims_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserList">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserList" message="tns:IUserServicePublic_UserList_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserListResponse" message="tns:IUserServicePublic_UserList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UserListStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_UserList_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateValidUserName">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GenerateValidUserName" message="tns:IUserServicePublic_GenerateValidUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GenerateValidUserNameResponse" message="tns:IUserServicePublic_GenerateValidUserName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GenerateValidUserNameStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GenerateValidUserName_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewUser">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreateNewUser" message="tns:IUserServicePublic_CreateNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreateNewUserResponse" message="tns:IUserServicePublic_CreateNewUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CreateNewUserStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_CreateNewUser_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserRef">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserRef" message="tns:IUserServicePublic_GetUserByUserRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserRefResponse" message="tns:IUserServicePublic_GetUserByUserRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserRefStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByUserRef_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserName">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserName" message="tns:IUserServicePublic_GetUserByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserNameResponse" message="tns:IUserServicePublic_GetUserByUserName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserNameStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByUserName_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByUserGuid">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserGuid" message="tns:IUserServicePublic_GetUserByUserGuid_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserGuidResponse" message="tns:IUserServicePublic_GetUserByUserGuid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByUserGuidStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByUserGuid_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByHrPersonelRef">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByHrPersonelRef" message="tns:IUserServicePublic_GetUserByHrPersonelRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByHrPersonelRefResponse" message="tns:IUserServicePublic_GetUserByHrPersonelRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByHrPersonelRefStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByHrPersonelRef_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMobile">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMobile" message="tns:IUserServicePublic_GetUserByMobile_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMobileResponse" message="tns:IUserServicePublic_GetUserByMobile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMobileStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByMobile_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByMail">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMail" message="tns:IUserServicePublic_GetUserByMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMailResponse" message="tns:IUserServicePublic_GetUserByMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserByMailStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserByMail_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserClaim">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaim" message="tns:IUserServicePublic_SetUserClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaimResponse" message="tns:IUserServicePublic_SetUserClaim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaimStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserClaim_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserGroupClaim">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserGroupClaim" message="tns:IUserServicePublic_SetUserGroupClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserGroupClaimResponse" message="tns:IUserServicePublic_SetUserGroupClaim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserGroupClaimStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserGroupClaim_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRoleClaim">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetRoleClaim" message="tns:IUserServicePublic_SetRoleClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetRoleClaimResponse" message="tns:IUserServicePublic_SetRoleClaim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetRoleClaimStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetRoleClaim_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserRole">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserRole" message="tns:IUserServicePublic_SetUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserRoleResponse" message="tns:IUserServicePublic_SetUserRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserRoleStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserRole_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserUserGroup">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserUserGroup" message="tns:IUserServicePublic_SetUserUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserUserGroupResponse" message="tns:IUserServicePublic_SetUserUserGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserUserGroupStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserUserGroup_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonelIDByUserName">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdatePersonelIDByUserName" message="tns:IUserServicePublic_UpdatePersonelIDByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdatePersonelIDByUserNameResponse" message="tns:IUserServicePublic_UpdatePersonelIDByUserName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdatePersonelIDByUserNameStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_UpdatePersonelIDByUserName_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLdapUserExists">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsLdapUserExists" message="tns:IUserServicePublic_IsLdapUserExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsLdapUserExistsResponse" message="tns:IUserServicePublic_IsLdapUserExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsLdapUserExistsStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_IsLdapUserExists_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeUserEmail">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangeUserEmail" message="tns:IUserServicePublic_ChangeUserEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangeUserEmailResponse" message="tns:IUserServicePublic_ChangeUserEmail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/ChangeUserEmailStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_ChangeUserEmail_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembersOfUserGroup">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetMembersOfUserGroup" message="tns:IUserServicePublic_GetMembersOfUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetMembersOfUserGroupResponse" message="tns:IUserServicePublic_GetMembersOfUserGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetMembersOfUserGroupStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetMembersOfUserGroup_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserClaimsByUserRef">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaimsByUserRef" message="tns:IUserServicePublic_GetUserClaimsByUserRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaimsByUserRefResponse" message="tns:IUserServicePublic_GetUserClaimsByUserRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaimsByUserRefStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserClaimsByUserRef_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserClaims">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaims" message="tns:IUserServicePublic_GetUserClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaimsResponse" message="tns:IUserServicePublic_GetUserClaims_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserClaimsStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserClaims_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBasicInfo">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserBasicInfo" message="tns:IUserServicePublic_GetUserBasicInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserBasicInfoResponse" message="tns:IUserServicePublic_GetUserBasicInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUserBasicInfoStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUserBasicInfo_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExists">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsExists" message="tns:IUserServicePublic_IsExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsExistsResponse" message="tns:IUserServicePublic_IsExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/IsExistsStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_IsExists_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUser" message="tns:IUserServicePublic_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUserResponse" message="tns:IUserServicePublic_UpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUserStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_UpdateUser_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserClaimByUserRef">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaimByUserRef" message="tns:IUserServicePublic_SetUserClaimByUserRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaimByUserRefResponse" message="tns:IUserServicePublic_SetUserClaimByUserRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserClaimByUserRefStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserClaimByUserRef_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserClaim">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserClaim" message="tns:IUserServicePublic_DeleteUserClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserClaimResponse" message="tns:IUserServicePublic_DeleteUserClaim_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserClaimStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_DeleteUserClaim_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersByCompany">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUsersByCompany" message="tns:IUserServicePublic_GetUsersByCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUsersByCompanyResponse" message="tns:IUserServicePublic_GetUsersByCompany_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/GetUsersByCompanyStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_GetUsersByCompany_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserPhoto">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserPhoto" message="tns:IUserServicePublic_SetUserPhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserPhotoResponse" message="tns:IUserServicePublic_SetUserPhoto_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SetUserPhotoStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SetUserPhoto_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SpecifyUsername">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SpecifyUsername" message="tns:IUserServicePublic_SpecifyUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SpecifyUsernameResponse" message="tns:IUserServicePublic_SpecifyUsername_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/SpecifyUsernameStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_SpecifyUsername_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserFromUserGroup">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserFromUserGroup" message="tns:IUserServicePublic_DeleteUserFromUserGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserFromUserGroupResponse" message="tns:IUserServicePublic_DeleteUserFromUserGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/DeleteUserFromUserGroupStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_DeleteUserFromUserGroup_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserByHrPersonelRef">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckUserByHrPersonelRef" message="tns:IUserServicePublic_CheckUserByHrPersonelRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckUserByHrPersonelRefResponse" message="tns:IUserServicePublic_CheckUserByHrPersonelRef_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/CheckUserByHrPersonelRefStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_CheckUserByHrPersonelRef_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUserInfo" message="tns:IUserServicePublic_UpdateUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUserInfoResponse" message="tns:IUserServicePublic_UpdateUserInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://lcwaikiki.com/2013/07/Pars/Util/Management/IUserServicePublic/UpdateUserInfoStandardFaultContractFault" name="StandardFaultContractFault" message="tns:IUserServicePublic_UpdateUserInfo_StandardFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

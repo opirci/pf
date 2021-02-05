@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{160BB44C-A974-48EF-B9BD-D9A3138998D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pars.Util.Puma.Domain</RootNamespace>
+    <AssemblyName>Pars.Util.Puma.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Common.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Logging.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Validation.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Practices.ServiceLocation.1.0.0\lib\net45\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Unity.1.0.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Unity.1.0.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pars.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f2de0b65b2a84c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pars.Core.1.1.109\lib\net451\Pars.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs" />
+    <Compile Include="Claim.cs" />
+    <Compile Include="ConfigurationContext.cs" />
+    <Compile Include="ConfigurationItem.cs" />
+    <Compile Include="ConfigurationKey.cs" />
+    <Compile Include="DataLocalization.cs" />
+    <Compile Include="DataTableProxy.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="DateWeekRange.cs" />
+    <Compile Include="DomainBase.cs" />
+    <Compile Include="EntityState.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="LookupRequest.cs" />
+    <Compile Include="PagedLookupResponse.cs" />
+    <Compile Include="Pars.Core\Linq\Extensions.cs" />
+    <Compile Include="Pars.Core\Linq\IPaging.cs" />
+    <Compile Include="LocaleData.cs" />
+    <Compile Include="IRelation.cs" />
+    <Compile Include="Pars.Core\Service\LookupResponse.cs" />
+    <Compile Include="MemberState.cs" />
+    <Compile Include="Pars.Core\PagedList.cs" />
+    <Compile Include="Pars.Core\Linq\ITQueryable.cs" />
+    <Compile Include="Pars.Core\Linq\Paging.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pars.Core\Linq\TEnumerable.cs" />
+    <Compile Include="Pars.Core\Linq\TextSearch.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="Pars.Core\Service\RequestBase.cs" />
+    <Compile Include="Pars.Core\Service\ResponseBase.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Pars.Core\LookupItem.cs" />
+    <Compile Include="RoleRelation.cs" />
+    <Compile Include="Pars.Core\Linq\TextSearchAs.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SupplierReport.cs" />
+    <Compile Include="SupplierUser.cs" />
+    <Compile Include="UserClaim.cs" />
+    <Compile Include="UserGroupRelation.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserGroup.cs" />
+    <Compile Include="UserRelation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

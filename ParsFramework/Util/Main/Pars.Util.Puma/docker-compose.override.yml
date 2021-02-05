@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  pars.util.puma.api.definition:
+    ports:
+      - "80"
+  pars.util.puma.api.datalocalizer:
+    ports:
+      - "80"
+  pars.util.puma.api.authmanagement:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
+
+

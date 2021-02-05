@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DefinitionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IDefinitionService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+              <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wstrust/mixed/certificate</Address>
+                <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+                  <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <wsx:MetadataSection xmlns="">
+                      <wsx:MetadataReference>
+                        <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wstrust/mex</Address>
+                      </wsx:MetadataReference>
+                    </wsx:MetadataSection>
+                  </Metadata>
+                </Metadata>
+              </Issuer>
+              <sp:RequestSecurityTokenTemplate>
+                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+                <trust:CanonicalizationAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/10/xml-exc-c14n#</trust:CanonicalizationAlgorithm>
+                <trust:EncryptionAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/04/xmlenc#aes256-cbc</trust:EncryptionAlgorithm>
+              </sp:RequestSecurityTokenTemplate>
+              <wsp:Policy>
+                <sp:RequireInternalReference />
+              </wsp:Policy>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust13>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDefinitionService_GetEntityStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityStates" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetEntityStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetMemberStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberStates" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetMemberStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSegmentsAsLookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSegmentsAsLookup" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSegmentsAsLookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSegmentsAsLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSubSegmentsAsLookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubSegmentsAsLookup" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSubSegmentsAsLookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubSegmentsAsLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetBusinessLinesAsLookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessLinesAsLookup" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetBusinessLinesAsLookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessLinesAsLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetAgeSexGroupsAsLookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeSexGroupsAsLookup" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetAgeSexGroupsAsLookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgeSexGroupsAsLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSupplierTypesAsLookup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierTypesAsLookup" />
+  </wsdl:message>
+  <wsdl:message name="IDefinitionService_GetSupplierTypesAsLookup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupplierTypesAsLookupResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDefinitionService">
+    <wsdl:operation name="GetEntityStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetEntityStates" message="tns:IDefinitionService_GetEntityStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetEntityStatesResponse" message="tns:IDefinitionService_GetEntityStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetMemberStates" message="tns:IDefinitionService_GetMemberStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetMemberStatesResponse" message="tns:IDefinitionService_GetMemberStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSegmentsAsLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetSegmentsAsLookup" message="tns:IDefinitionService_GetSegmentsAsLookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetSegmentsAsLookupResponse" message="tns:IDefinitionService_GetSegmentsAsLookup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSegmentsAsLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetSubSegmentsAsLookup" message="tns:IDefinitionService_GetSubSegmentsAsLookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetSubSegmentsAsLookupResponse" message="tns:IDefinitionService_GetSubSegmentsAsLookup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessLinesAsLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetBusinessLinesAsLookup" message="tns:IDefinitionService_GetBusinessLinesAsLookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetBusinessLinesAsLookupResponse" message="tns:IDefinitionService_GetBusinessLinesAsLookup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeSexGroupsAsLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetAgeSexGroupsAsLookup" message="tns:IDefinitionService_GetAgeSexGroupsAsLookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetAgeSexGroupsAsLookupResponse" message="tns:IDefinitionService_GetAgeSexGroupsAsLookup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierTypesAsLookup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDefinitionService/GetSupplierTypesAsLookup" message="tns:IDefinitionService_GetSupplierTypesAsLookup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDefinitionService/GetSupplierTypesAsLookupResponse" message="tns:IDefinitionService_GetSupplierTypesAsLookup_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS2007FederationHttpBinding_IDefinitionService" type="tns:IDefinitionService">
+    <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IDefinitionService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEntityStates">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetEntityStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberStates">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetMemberStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSegmentsAsLookup">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetSegmentsAsLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSegmentsAsLookup">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetSubSegmentsAsLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessLinesAsLookup">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetBusinessLinesAsLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgeSexGroupsAsLookup">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetAgeSexGroupsAsLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierTypesAsLookup">
+      <soap12:operation soapAction="http://tempuri.org/IDefinitionService/GetSupplierTypesAsLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DefinitionService">
+    <wsdl:port name="WS2007FederationHttpBinding_IDefinitionService" binding="tns:WS2007FederationHttpBinding_IDefinitionService">
+      <soap12:address location="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

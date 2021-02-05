@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="601c8f42-a938-4f5c-8f48-81dffd67a0d7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthManagementService3.xsd" MetadataType="Schema" ID="8479a222-3826-4b9b-b098-38d4142331ef" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AuthManagementService1.xsd" MetadataType="Schema" ID="3787383f-85e4-464a-b4c2-70f38800c674" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthManagementService.xsd" MetadataType="Schema" ID="fb7a8ded-662c-41b3-8098-029cb4e57019" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuthManagementService2.xsd" MetadataType="Schema" ID="a41687b3-685d-4d28-aafa-e0e9c5c6bfa7" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthManagementService4.xsd" MetadataType="Schema" ID="18f93545-656b-47d5-aaee-91406ebf87ba" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AuthManagementService410.xsd" MetadataType="Schema" ID="db967aa0-f325-43f6-865a-283e93b69ca3" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AuthManagementService.wsdl" MetadataType="Wsdl" ID="7efe9597-ffdd-4cae-bc11-bc2c711aea71" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?wsdl" />
+    <MetadataFile FileName="AuthManagementService.disco" MetadataType="Disco" ID="55e95cc4-a5e7-4ba8-93e8-61b34ab1f7c5" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

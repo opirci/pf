@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Supplier" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Supplier" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Pars.Util/Puma/Service/Supplier/SupplierService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Pars.Util/Puma/Service/Supplier/SupplierService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" />
+  <xs:import schemaLocation="http://localhost/Pars.Util/Puma/Service/Supplier/SupplierService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+  <xs:complexType name="GetSuppliersFilteredRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ageSexGroups" nillable="true" type="q2:ArrayOfint" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="businessLines" nillable="true" type="q3:ArrayOfint" />
+          <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="hasNoUsers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="segment" type="xs:int" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subSegments" nillable="true" type="q4:ArrayOfint" />
+          <xs:element minOccurs="0" name="supplierType" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSuppliersFilteredRequest" nillable="true" type="tns:GetSuppliersFilteredRequest" />
+  <xs:complexType name="GetSuppliersFilteredResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q5:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" type="xs:int" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="values" nillable="true" type="q6:ArrayOfSupplier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSuppliersFilteredResponse" nillable="true" type="tns:GetSuppliersFilteredResponse" />
+  <xs:complexType name="GetSupplierUsersRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q7:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="partyRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupplierUsersRequest" nillable="true" type="tns:GetSupplierUsersRequest" />
+  <xs:complexType name="GetSupplierUsersResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q8:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="values" nillable="true" type="q9:ArrayOfSupplierUser" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupplierUsersResponse" nillable="true" type="tns:GetSupplierUsersResponse" />
+  <xs:complexType name="GetSupplierRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q10:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="supplierCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupplierRequest" nillable="true" type="tns:GetSupplierRequest" />
+  <xs:complexType name="GetSupplierResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q11:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="value" nillable="true" type="q12:Supplier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSupplierResponse" nillable="true" type="tns:GetSupplierResponse" />
+</xs:schema>

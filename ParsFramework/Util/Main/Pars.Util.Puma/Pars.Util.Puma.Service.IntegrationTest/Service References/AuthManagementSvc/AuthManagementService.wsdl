@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthManagementService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IAuthManagementService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+              <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wstrust/mixed/certificate</Address>
+                <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+                  <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <wsx:MetadataSection xmlns="">
+                      <wsx:MetadataReference>
+                        <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wstrust/mex</Address>
+                      </wsx:MetadataReference>
+                    </wsx:MetadataSection>
+                  </Metadata>
+                </Metadata>
+              </Issuer>
+              <sp:RequestSecurityTokenTemplate>
+                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+                <trust:CanonicalizationAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/10/xml-exc-c14n#</trust:CanonicalizationAlgorithm>
+                <trust:EncryptionAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/04/xmlenc#aes256-cbc</trust:EncryptionAlgorithm>
+              </sp:RequestSecurityTokenTemplate>
+              <wsp:Policy>
+                <sp:RequireInternalReference />
+              </wsp:Policy>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust13>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.AuthManagement" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" />
+      <xsd:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthManagementService_GetClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaims" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetUserGroupsByClaimRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupsByClaimRef" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetUserGroupsByClaimRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserGroupsByClaimRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_SaveClaim_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveClaim" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_SaveClaim_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveClaimResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesByClaimRef_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesByClaimRef" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesByClaimRef_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesByClaimRefResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_SaveRoleRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRoleRelation" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_SaveRoleRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveRoleRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesAsLookupByStartingName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesAsLookupByStartingName" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesAsLookupByStartingName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesAsLookupByStartingNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesAsLookupByContainingName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesAsLookupByContainingName" />
+  </wsdl:message>
+  <wsdl:message name="IAuthManagementService_GetRolesAsLookupByContainingName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesAsLookupByContainingNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthManagementService">
+    <wsdl:operation name="GetClaims">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/GetClaims" message="tns:IAuthManagementService_GetClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/GetClaimsResponse" message="tns:IAuthManagementService_GetClaims_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupsByClaimRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/GetUserGroupsByClaimRef" message="tns:IAuthManagementService_GetUserGroupsByClaimRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/GetUserGroupsByClaimRefResponse" message="tns:IAuthManagementService_GetUserGroupsByClaimRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveClaim">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/SaveClaim" message="tns:IAuthManagementService_SaveClaim_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/SaveClaimResponse" message="tns:IAuthManagementService_SaveClaim_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByClaimRef">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesByClaimRef" message="tns:IAuthManagementService_GetRolesByClaimRef_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesByClaimRefResponse" message="tns:IAuthManagementService_GetRolesByClaimRef_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/SaveRoleRelation" message="tns:IAuthManagementService_SaveRoleRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/SaveRoleRelationResponse" message="tns:IAuthManagementService_SaveRoleRelation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesAsLookupByStartingName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByStartingName" message="tns:IAuthManagementService_GetRolesAsLookupByStartingName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByStartingNameResponse" message="tns:IAuthManagementService_GetRolesAsLookupByStartingName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesAsLookupByContainingName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByContainingName" message="tns:IAuthManagementService_GetRolesAsLookupByContainingName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByContainingNameResponse" message="tns:IAuthManagementService_GetRolesAsLookupByContainingName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS2007FederationHttpBinding_IAuthManagementService" type="tns:IAuthManagementService">
+    <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IAuthManagementService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClaims">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/GetClaims" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserGroupsByClaimRef">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/GetUserGroupsByClaimRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveClaim">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/SaveClaim" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByClaimRef">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/GetRolesByClaimRef" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRoleRelation">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/SaveRoleRelation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesAsLookupByStartingName">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByStartingName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesAsLookupByContainingName">
+      <soap12:operation soapAction="http://tempuri.org/IAuthManagementService/GetRolesAsLookupByContainingName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthManagementService">
+    <wsdl:port name="WS2007FederationHttpBinding_IAuthManagementService" binding="tns:WS2007FederationHttpBinding_IAuthManagementService">
+      <soap12:address location="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

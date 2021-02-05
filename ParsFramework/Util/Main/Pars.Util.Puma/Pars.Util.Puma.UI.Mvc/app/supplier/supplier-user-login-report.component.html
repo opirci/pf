@@ -1,0 +1,112 @@
+﻿<div class="container-fluid">
+    <msg-text i18n-value #msgYouDoNotHavePermissionToList name="msgYouDoNotHavePermissionToList" value="Listelemek için yetkiniz yok"></msg-text>
+    <msg-text i18n-value #msgFiltersAreNotValid name="msgFiltersAreNotValid" value="Filitreler hatalı"></msg-text>
+    <msg-text i18n-value #msgNoRecordsFound name="msgNoRecordsFound" value="Kayıt bulunamadı"></msg-text>
+    <msg-text i18n-value #msgErrorReadingReport name="msgErrorReadingReport" value="Rapor okunurken hata oluştu"></msg-text>
+    <msg-text i18n-value #msgWarning name="msgWarning" value="Uyarı"></msg-text>
+    <msg-text i18n-value #msgError name="msgError" value="Hata"></msg-text>
+    <msg-text i18n-value #msgGridHeader name="msgGridHeader" value="Tedarikçi Kullanıcı Login Raporu "></msg-text>
+
+
+    <div #headerDiv name="headerDiv" id="headerDiv" class="panel panel-default">
+        <div class="panel-heading">
+            <h2 i18n class="panel-title">
+                Tedarikçi Kullanıcı Login Raporu
+                <a href="#header-body" aria-expanded="true" class="btn btn-box-tool pull-right" data-toggle="collapse">Gizle/Göster</a>
+            </h2>
+        </div>
+        <div id="header-body" class="panel-body">
+            <div class="form-group ">
+
+                <label i18n class="text-blue">Rapor Tipi</label>
+                <select i18n-placeholder class="select form-control" aria-describedby="reportTypeAddon" [(ngModel)]="reportType" placeholder="Rapor Tipi" id="reportType" name="reportType" style="width:150px;">
+                    <option i18n value="1">Login Sayısı</option>
+                    <option i18n value="2">Kullanıcı Sayısı</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label i18n class="text-blue">Başlangıç Yıl-Hafta</label>
+                <div class="input-group col-xs-2">
+                    <input style="min-width: 70px;" i18n-placeholder type="number" class="form-control" required [(ngModel)]="mstartYear" placeholder="Yıl" name="startYear" id="startYear" />
+                    <span class="input-group-addon">-</span>
+                    <input style="min-width: 60px;" i18n-placeholder type="number" class="form-control" required [(ngModel)]="mstartWeek" placeholder="Hafta" name="startWeek" id="startWeek" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label i18n class="text-blue">Bitiş Yıl-Hafta</label>
+                <div class="input-group col-xs-2">
+                    <input style="min-width: 70px;" i18n-placeholder type="number" class="form-control" required [(ngModel)]="mendYear" placeholder="Yıl" name="endYear" id="endYear" />
+                    <span class="input-group-addon">-</span>
+                    <input style="min-width: 60px;" i18n-placeholder type="number" class="form-control" required [(ngModel)]="mendWeek" placeholder="Hafta" name="endWeek" id="endWeek" />
+                </div>
+            </div>
+
+
+
+            <!--<div class="input-group">
+                <label for="endYear">
+                    <span i18n> Bitiş     </span>
+                    <input i18n-placeholder type="number" style="width:60px;" required [(ngModel)]="mendYear" placeholder="Yıl" name="endYear" id="endYear" /> <input i18n-placeholder type="number" style="width:40px;" required [(ngModel)]="mendWeek" placeholder="Hafta" name="endWeek" id="endWeek" />
+                </label>
+            </div>-->
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button i18n type="button" class="btn btn-primary" [disabled]="gettingReport || !canGetReport" (click)="getReport()"
+                            data-toggle="tooltip"
+                            [title]="cannotListMessage">
+                        Listele
+                    </button>
+                    <button i18n type="button" class="btn btn-primary" (click)="clearFilters()">
+                        Filtreleri Temizle
+                    </button>
+                    <lcw-export-button i18n-text #exportButton *ngIf="gridService?.data" text="Dışa aktar" buttonClass="btn btn-primary" (export)="export(exportButton.exportAs)"></lcw-export-button>
+                    <spinner [enabled]="gettingReport"></spinner>
+                    <!--<button i18n type="button" class="btn btn-primary" (click)="test()">
+                        Test
+                    </button>-->
+                </div>
+
+                <!--<div class="col-md-6">
+                    <button i18n type="button" class="btn btn-success btn-default" (click)="getDataTable()">
+                        Get DataTable
+                    </button>
+                </div>
+                <div class="col-md-6">
+                    <button i18n type="button" class="btn btn-success btn-default" (click)="saveDataTable()">
+                        Save DataTable
+                    </button>
+                </div>-->
+                <!--<div class="col-md-3">
+                    <button i18n type="button" class="btn btn-success btn-default" (click)="getDateWeekRange()">
+                        getDateWeekRange
+                    </button>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    <div id="report" name="report" class="row">
+        <lcw-grid [gridService]="gridService" [excelExport]="false" [autoGenerateColumns]="true" [showHeader]="gridService.data != null"
+               [gridTitle]="gridHeaderText" columnHeaderStyle="color:#3c6eac;" [onCellFormat]="formatCell" exportButtonClass="btn btn-primary" [hideZeros]="true"><!--[alignNumbers]="false"-->
+            <!--<xgrid-column  i18n-headerName headerName="Tedarikçi Kod" fieldName="supplierCode"></xgrid-column>-->
+            <lcw-grid-column i18n-headerName headerName="Tedarikçi Adı" fieldName="SupplierName"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Ülke" fieldName="Country"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Tedarikçi Tipi" fieldName="SupplierType"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Segment" fieldName="Segment"></lcw-grid-column>
+
+        <!--<lcw-grid-auto-generated-column style="background-color: chartreuse;" headerStyle="background-color: aqua; text-align: right;"></lcw-grid-auto-generated-column>-->
+
+            <lcw-grid-auto-generated-column headerStyle="text-align: right;"></lcw-grid-auto-generated-column>
+            <!--<lcw-grid-summaries [pipe]="formatla">-->
+                <!--<lcw-grid-summary title="TOPLAM" columns="auto" [onCalculate]="calcToplam" pipe=""> </lcw-grid-summary>-->
+
+            <!--<lcw-grid-summary title="TOPLAM" columns="auto" [onCalculate]="calcToplam" > </lcw-grid-summary>
+            <lcw-grid-summary title="ORTALAMA" columns="auto" [onCalculate]="calcOrtalama"> </lcw-grid-summary>-->
+
+                <lcw-grid-summary i18n-title name="toplam" title="TOPLAM" columns="auto" [operator]="LcwGridSummaryOperators.Sum"> </lcw-grid-summary>
+                <!--<lcw-grid-summary name="ortalama"title="ORTALAMA" columns="auto" [operator]="LcwGridSummaryOperators.Avg"> </lcw-grid-summary>-->
+
+            <!--</lcw-grid-summaries>-->
+        </lcw-grid>
+    </div>
+    <simple-notifications [options]="notifyOptions"></simple-notifications>
+</div>

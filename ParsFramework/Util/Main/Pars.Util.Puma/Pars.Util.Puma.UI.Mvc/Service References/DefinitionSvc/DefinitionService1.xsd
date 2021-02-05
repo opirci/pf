@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+  <xs:complexType name="GetEntityStatesResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="EntityStates" nillable="true" type="q1:ArrayOfEntityState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetEntityStatesResponse" nillable="true" type="tns:GetEntityStatesResponse" />
+  <xs:complexType name="MemberStateListResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="MemberStates" nillable="true" type="q2:ArrayOfMemberState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberStateListResponse" nillable="true" type="tns:MemberStateListResponse" />
+  <xs:complexType name="GetDatabasesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" base="q3:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serverRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDatabasesRequest" nillable="true" type="tns:GetDatabasesRequest" />
+  <xs:complexType name="GetTablesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" base="q4:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="databaseRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetTablesRequest" nillable="true" type="tns:GetTablesRequest" />
+  <xs:complexType name="GetTableColumnsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" base="q5:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tableRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetTableColumnsRequest" nillable="true" type="tns:GetTableColumnsRequest" />
+</xs:schema>

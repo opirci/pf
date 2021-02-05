@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+  <xs:complexType name="RequestBase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+  <xs:complexType name="ResponseBase">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="errorMessages" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="warningMessages" nillable="true" type="q2:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResponseBase" nillable="true" type="tns:ResponseBase" />
+  <xs:complexType name="LookupResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="values" nillable="true" type="q3:ArrayOfLookup" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupResponse" nillable="true" type="tns:LookupResponse" />
+</xs:schema>

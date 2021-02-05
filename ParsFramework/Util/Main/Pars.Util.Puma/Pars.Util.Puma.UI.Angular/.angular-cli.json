@@ -1,0 +1,65 @@
+﻿{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "pars.util.puma.ui.angular"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css",
+        "../bootstraptemplate/bootstrap/css/bootstrap.min.css",
+        "../bootstraptemplate/dist/css/AdminLTE.min.css",
+        "../bootstraptemplate/dist/css/skins/_all-skins.min.css",
+        "../bootstraptemplate/plugins/iCheck/flat/blue.css",
+        "../bootstraptemplate/plugins/typicons/typicons.css"
+      ],
+      "scripts": [
+        "../bootstraptemplate/plugins/jQuery/jquery-2.2.3.min.js",
+        "../bootstraptemplate/bootstrap/js/bootstrap.min.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

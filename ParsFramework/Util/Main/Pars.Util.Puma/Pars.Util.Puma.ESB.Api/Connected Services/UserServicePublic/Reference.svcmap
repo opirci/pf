@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9fe4faad-efa1-4c1b-ac5f-c392a32c3c16" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserServicePublic.xsd" MetadataType="Schema" ID="605e0f67-d21a-4633-b92f-e8410e86ea0b" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd9" />
+    <MetadataFile FileName="UserServicePublic1.xsd" MetadataType="Schema" ID="95f535aa-904a-4ccc-aa79-10693d682c3d" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd11" />
+    <MetadataFile FileName="UserServicePublic2.xsd" MetadataType="Schema" ID="14914d40-33d2-4e5d-a54c-4558c5587b9d" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd10" />
+    <MetadataFile FileName="UserServicePublic3.xsd" MetadataType="Schema" ID="bd20564d-34ab-4e9c-86a5-9c9ca2405bf3" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd5" />
+    <MetadataFile FileName="UserServicePublic4.xsd" MetadataType="Schema" ID="6bb86e42-575a-42b8-9782-0017844d2b63" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd7" />
+    <MetadataFile FileName="UserServicePublic5.xsd" MetadataType="Schema" ID="bbeb8ed4-45b5-4c9b-b03f-15c636dbe128" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserServicePublic6.xsd" MetadataType="Schema" ID="e688233a-e828-4d48-847f-9f42118732f4" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd8" />
+    <MetadataFile FileName="UserServicePublic7.xsd" MetadataType="Schema" ID="b17773bc-7363-47b2-bce2-47aa3911dd36" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserServicePublic8.xsd" MetadataType="Schema" ID="3f8f6604-b2df-47ce-a725-a12b9325004e" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserServicePublic9.xsd" MetadataType="Schema" ID="eaafff2c-e990-40f4-9fc1-d0a661a5ca60" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd6" />
+    <MetadataFile FileName="UserServicePublic.wsdl" MetadataType="Wsdl" ID="a9e941ba-02c8-4476-a3af-4ba868ed6e8d" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?wsdl" />
+    <MetadataFile FileName="UserServicePublic10.xsd" MetadataType="Schema" ID="465726f2-f435-408d-aea3-32c8466b99bb" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserServicePublic.disco" MetadataType="Disco" ID="69063986-896b-4be5-8e3c-ee78c3841cb8" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?disco" />
+    <MetadataFile FileName="UserServicePublic11.xsd" MetadataType="Schema" ID="4d5e3d3a-9fef-4393-8a0a-a6f0d545b33c" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserServicePublic1.wsdl" MetadataType="Wsdl" ID="daa89db3-247f-4a11-a403-ed94b5709355" SourceId="1" SourceUrl="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

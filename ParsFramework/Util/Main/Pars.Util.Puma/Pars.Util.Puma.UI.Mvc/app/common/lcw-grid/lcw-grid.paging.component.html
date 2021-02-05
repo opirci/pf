@@ -1,0 +1,12 @@
+﻿<input i18n style="display: none" #prev type="hidden" value="Previous" />
+<input i18n style="display: none" #next type="hidden" value="Next" />
+<div>
+    <ul class="pager">
+        <li><a (click)="previousPage();" style="cursor: pointer;">{{previousText != null ? previousText : prev.value}}</a></li>
+        <li><a (click)="nextPage();" style="cursor: pointer;">{{ nextText != null ? nextText : next.value}}</a></li>
+    </ul>
+    <ng-container *ngIf="hidePageNumbers!=true">
+        <input [(value)]="pageNumber" id="pageNumber" type="text" (change)="pageNumberChange()" style="width: 30px;" />
+        <span> / {{pageCount}} - ({{totalCount}})</span>
+    </ng-container>
+</div>

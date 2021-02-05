@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/Service/UserServicePublic.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management" />
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/Service/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="NewUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HRPersonelRef" type="xs:int" />
+      <xs:element minOccurs="0" name="PartyLanguageRef" type="xs:int" />
+      <xs:element minOccurs="0" name="PartyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartyTitle" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Management" minOccurs="0" name="PartyType" type="q1:PartyType" />
+      <xs:element minOccurs="0" name="PartyUid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PwdHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestUid" type="ser:guid" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Util.Management" minOccurs="0" name="SynchSource" type="q2:SynchSource" />
+      <xs:element minOccurs="0" name="UserEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserEnvironmentRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserLogonValidTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserPwd" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Util.Management" minOccurs="0" name="UserType" type="q3:UserType" />
+      <xs:element minOccurs="0" name="UserUid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewUserRequest" nillable="true" type="tns:NewUserRequest" />
+</xs:schema>

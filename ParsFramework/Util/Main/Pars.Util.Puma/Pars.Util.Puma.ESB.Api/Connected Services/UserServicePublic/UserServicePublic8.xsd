@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfUserBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserBase" nillable="true" type="tns:UserBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserBase" nillable="true" type="tns:ArrayOfUserBase" />
+  <xs:complexType name="UserBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDomainUser" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileAreaCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SurName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserUid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserBase" nillable="true" type="tns:UserBase" />
+  <xs:complexType name="ArrayOftb_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_User" nillable="true" type="tns:tb_User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_User" nillable="true" type="tns:ArrayOftb_User" />
+  <xs:complexType name="tb_User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Companies" nillable="true" type="tns:ArrayOftb_UserCompany" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Domain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HRPersonelRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDomainUser" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanguageRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Logon" nillable="true" type="tns:tb_UserLogon" />
+      <xs:element minOccurs="0" name="Logons" nillable="true" type="tns:ArrayOftb_UserLogon" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="tns:tb_UserMail" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Parties" nillable="true" type="tns:ArrayOftb_UserParty" />
+      <xs:element minOccurs="0" name="PartyRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PersonelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="StartMenuRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SurName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeZoneRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="UserClaims" nillable="true" type="tns:ArrayOftb_UserClaim" />
+      <xs:element minOccurs="0" name="UserEnvironments" nillable="true" type="tns:ArrayOftb_UserEnvironment" />
+      <xs:element minOccurs="0" name="UserGroupItems" nillable="true" type="tns:ArrayOftb_UserGroupItem" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRoles" nillable="true" type="tns:ArrayOftb_UserRole" />
+      <xs:element minOccurs="0" name="UserTypeRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="UserUid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_User" nillable="true" type="tns:tb_User" />
+  <xs:complexType name="ArrayOftb_UserCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserCompany" nillable="true" type="tns:tb_UserCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserCompany" nillable="true" type="tns:ArrayOftb_UserCompany" />
+  <xs:complexType name="tb_UserCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDefault" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MemberStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserCompanyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserCompany" nillable="true" type="tns:tb_UserCompany" />
+  <xs:complexType name="tb_UserLogon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InvalidLogonCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsDomainLogon" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastLogonDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastPwdChangeDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LogonStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PwdChangeCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PwdExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PwdHash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PwdStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserLogonRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserLogon" nillable="true" type="tns:tb_UserLogon" />
+  <xs:complexType name="ArrayOftb_UserLogon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserLogon" nillable="true" type="tns:tb_UserLogon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserLogon" nillable="true" type="tns:ArrayOftb_UserLogon" />
+  <xs:complexType name="tb_UserMail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserMailRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserMail" nillable="true" type="tns:tb_UserMail" />
+  <xs:complexType name="ArrayOftb_UserParty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserParty" nillable="true" type="tns:tb_UserParty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserParty" nillable="true" type="tns:ArrayOftb_UserParty" />
+  <xs:complexType name="tb_UserParty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PartyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserPartyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserParty" nillable="true" type="tns:tb_UserParty" />
+  <xs:complexType name="ArrayOftb_UserClaim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserClaim" nillable="true" type="tns:tb_UserClaim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserClaim" nillable="true" type="tns:ArrayOftb_UserClaim" />
+  <xs:complexType name="tb_UserClaim">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaimRef" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserClaimRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserClaim" nillable="true" type="tns:tb_UserClaim" />
+  <xs:complexType name="ArrayOftb_UserEnvironment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserEnvironment" nillable="true" type="tns:tb_UserEnvironment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserEnvironment" nillable="true" type="tns:ArrayOftb_UserEnvironment" />
+  <xs:complexType name="tb_UserEnvironment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EnvironmentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EnvironmentRef" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserEnvironmentRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserEnvironment" nillable="true" type="tns:tb_UserEnvironment" />
+  <xs:complexType name="ArrayOftb_UserGroupItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserGroupItem" nillable="true" type="tns:tb_UserGroupItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserGroupItem" nillable="true" type="tns:ArrayOftb_UserGroupItem" />
+  <xs:complexType name="tb_UserGroupItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ADAccounts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SynchSourceRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGroupItemRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGroupRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserGroupText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserGroupItem" nillable="true" type="tns:tb_UserGroupItem" />
+  <xs:complexType name="ArrayOftb_UserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tb_UserRole" nillable="true" type="tns:tb_UserRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftb_UserRole" nillable="true" type="tns:ArrayOftb_UserRole" />
+  <xs:complexType name="tb_UserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MemberStateRef" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedUserRef" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleRef" type="xs:int" />
+      <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserRoleRef" type="xs:int" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tb_UserRole" nillable="true" type="tns:tb_UserRole" />
+</xs:schema>

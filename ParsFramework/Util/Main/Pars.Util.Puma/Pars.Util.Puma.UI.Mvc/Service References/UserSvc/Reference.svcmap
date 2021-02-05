@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="240a72f9-f2de-4661-a2ce-7af299404702" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost/Pars.Util/Puma/Service/User/UserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="681f56b3-7688-441d-b531-754c2af9bd8c" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?wsdl" />
+    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="a7c4e32a-3bec-4151-b6b5-03db2416f3db" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?disco" />
+    <MetadataFile FileName="UserService4.xsd" MetadataType="Schema" ID="c55263c8-4aa9-4d6c-842d-3cd11503e4d2" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UserService3.xsd" MetadataType="Schema" ID="e76dffd0-b724-4610-a065-9317849581b0" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="578b0a2d-0f67-4ea3-bd9f-2ab2558bbf97" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="e0a84409-6008-4ef8-9a45-5caa7d0db1c4" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="8111d39b-8d6a-4d50-8a91-2d83fe37a4ba" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/User/UserService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

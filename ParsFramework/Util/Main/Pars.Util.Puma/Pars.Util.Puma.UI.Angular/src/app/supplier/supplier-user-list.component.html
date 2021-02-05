@@ -1,0 +1,240 @@
+﻿
+<spinner size="large" [enabled]="!(supplier?.partyRef > 0)" style="position: absolute; top: 50%; left: 50%; width: 200px; height: 100px; margin-left: -180px; margin-top: -255px;">
+</spinner>
+
+<msg-text i18n-value #msgSuccessHeader name="msgSuccessHeader" value="Bilgi"></msg-text>
+<msg-text i18n-value #msgSuccessContent name="msgSuccessContent" value="Bilgiler başarıyla kaydedildi"></msg-text>
+<msg-text i18n-value #msgErrorHeader name="msgErrorHeader" value="Hata"></msg-text>
+<msg-text i18n-value #msgErrorContent name="msgErrorContent" value="Bilgiler kaydedilirken bir hata oluştu"></msg-text>
+<msg-text i18n-value #msgErrorNoClaim ame="msgErrorNoClaim" value="Kullanıcı en az 1 yetkiye sahip olmalıdır!"></msg-text>
+<msg-text i18n-value #msgErrorMailUsed ame="msgErrorMailUsed" value="Bu mail adresi ile daha önce kayıt yapılmış!"></msg-text>
+
+<div *ngIf="supplier?.partyRef > 0" class="container-fluid">
+    <form #form="ngForm" novalidate class="form-inline">
+        <!--<div class="row">-->
+        <div class="panel panel-default">
+            <div i18n class="panel-heading text-bold">Tedarikçi Bilgileri</div>
+            <div class="panel-body">
+                <!--<fieldset style="border: 1px solid #3C6EAC; border-radius: 5px; padding-left: 30px; padding-bottom: 30px; margin-left: 20px; margin-right: 10px;">
+                <legend i18n style="border: medium none; position: relative; text-align: center; width: auto; color: #3C6EAC; font-size: 18px; font-weight: bold;">
+                    Tedarikçi Bilgileri
+                </legend>-->
+                <div class="row" style="margin-bottom: 10px;">
+                    <div *ngIf="isAdmin" class="form-control">
+                        <label i18n class="text-blue" style="width: 95px;">Tedarikçi Kodu</label>
+                        <label>:</label>
+                        <label>{{supplier?.supplierCode}}</label>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="form-control">
+                        <label i18n class="text-blue" style="width: 95px;">Tedarikçi Adı</label>
+                        <label>:</label>
+                        <label>{{supplier?.name}}</label>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="form-control">
+                        <label i18n class="text-blue" style="width: 95px;">Ad Soyad</label>
+                        <label>:</label>
+                        <label>{{supplier?.contactFirstName}} {{supplier?.contactLastName}}</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <label i18n class="text-blue" style="width: 95px;">Eposta</label>
+                        <label>:</label>
+                        <label>{{supplier?.contactMail}}</label>
+                    </div>
+                </div>
+            </div>
+            <!--</fieldset>-->
+            <xmodal [(visible)]="showFilter">
+                <!--<div class="checkbox">
+                    <label class="checkbox">
+                        <input i18n name="checkbox" id="checkbox" type="checkbox" value="Admin" [(ngModel)]="passivesIncluded" (ngModelChange)="getSupplierUsers();"/>
+                        Pasifler Görünsün
+                    </label>
+                </div>-->
+                <h3 i18n style="border-bottom: solid black 1px;">Filtreler</h3>
+                <div class="form-group ">
+                    <label i18n class="control-label " for="select">
+                        Durum :
+                    </label>
+                    <select class="select form-control" [(ngModel)]="filterStatus" id="filter_status" name="filter_status">
+                        <option i18n [ngValue]="0">
+                            Hepsi
+                        </option>
+                        <option i18n [ngValue]="1">
+                            Aktifler
+                        </option>
+                        <option i18n [ngValue]="2">
+                            Pasifler
+                        </option>
+                    </select>
+                </div>
+                <div style="margin-top: 50px;">
+                    <button i18n class="btn btn-primary" name="filter" (click)="getSupplierUsers(); showFilter = !showFilter;">
+                        Uygula
+                    </button>
+                </div>
+            </xmodal>
+            <!--</div>-->
+        </div>
+    </form>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md-12">
+            <div style="text-align: right">
+                <a class="btn btn-primary" (click)="showFilter = !showFilter">
+                    <span i18n class="glyphicon glyphicon-filter">Filtrele</span>
+                </a>
+            </div>
+            <div *ngIf="supplier?.partyRef > 0">
+                <lcw-grid i18n-gridTitle i18n-selectText gridTitle="Kullanıcı Listesi" [gridService]="xgridService" selectText="Güncelle" (onSelect)="selectFromGrid($event)" [enableSelectColumn]="true" columnHeaderStyle="color:#3c6eac; text-align:center;">
+                    <lcw-grid-column i18n-headerName headerName="Id" fieldName="userRef" headerStyle="color:#3c6eac"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Ad" fieldName="firstName" [isHidden]="true" headerStyle="color:#3c6eac"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Soyad" fieldName="lastName" [isHidden]="true" headerStyle="color:#3c6eac"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Ad Soyad" fieldName="fullName" headerStyle="color:#3c6eac"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Eposta" fieldName="mail" headerStyle="color:#3c6eac"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Yönetici" fieldName="hasManagerClaim" i18n-conversions conversions="true=Evet;false=Hayır"
+                             style="text-align: center;" headerStyle="color:#3c6eac; text-align:center;"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Finans" fieldName="hasFinanceClaim" i18n-conversions conversions="true=Evet;false=Hayır"
+                             style="text-align: center;" headerStyle="color:#3c6eac; text-align:center;"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Müşteri Temsil." fieldName="hasRepClaim" i18n-conversions conversions="true=Evet;false=Hayır"
+                             style="text-align: center;" headerStyle="color:#3c6eac; text-align:center;"></lcw-grid-column>
+                    <lcw-grid-column i18n-headerName headerName="Durum" fieldName="isActive" i18n-conversions [booleanView]="BooleanViews.text" conversions="true=Aktif;false=Pasif" 
+                             style="text-align: center;" headerStyle="color:#3c6eac; text-align:center;">
+                    </lcw-grid-column>
+                    <!--<div class="statusPopup">
+                        <p>tayfun esmer hadi bakalım</p>
+                    </div>-->
+                </lcw-grid>
+            </div>
+            <div style="text-align: right">
+                <div class="form-group" style="padding-bottom: 5px;">
+                    <div>
+                        <button i18n *ngIf="isAdmin && !isContactUserCreated" [disabled]="isCreateContactUserDisabled" class="btn btn-primary" name="submit" type="submit" (click)="createContactUser();">
+                            Yönetici Olarak Ata
+                        </button>
+                        <spinner [enabled]="isCreateContactUserDisabled"></spinner>
+                        <button i18n class="btn btn-primary" name="new" (click)="newSupplierUser(); showModal = !showModal">
+                            Yeni
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <xmodal [(visible)]="showModal">
+            <div class="col-md-6" style="width: 95%;">
+                <form method="post" #saveForm="ngForm">
+                    <div class="form-group ">
+                        <label i18n class="control-label text-blue" for="name">
+                            Ad
+                        </label>
+                        <input i18n i18n-placeholder class="form-control" [(ngModel)]="selectedSupplierUser.firstName" required placeholder="First Name is required" id="firstName" name="firstName" type="text" />
+                    </div>
+                    <div class="form-group ">
+                        <label i18n class="control-label text-blue" for="name">
+                            Soyad
+                        </label>
+                        <input i18n-placeholder class="form-control" [(ngModel)]="selectedSupplierUser.lastName" required placeholder="Last Name is required" id="lastName" name="lastName" type="text" />
+                    </div>
+                    <div class="form-group ">
+                        <label i18n class="control-label text-blue requiredField" for="email">
+                            Eposta
+                            <span class="asteriskField">
+                                *
+                            </span>
+                        </label>
+                        <input i18n-placeholder class="form-control" [(ngModel)]="selectedSupplierUser.mail" md-input required placeholder="Eposta girilmesi zorunludur" id="mail" name="mail" type="text" ngControl="email" #email
+                               [disabled]="selectedSupplierUser.userRef != null && selectedSupplierUser.userRef != 0"
+                               pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
+                        <div class="md-errors-spacer" [hidden]="email.valid || email.untouched">
+                            <div class="md-char-counter" *ngIf="email.errors && email.errors.pattern">
+                                EPosta giriniz
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <label i18n class="control-label text-blue" for="select">
+                            Durum
+                        </label>
+                        <select class="select form-control" [(ngModel)]="selectedSupplierUser.isActive" id="status" name="status">
+                            <option i18n value="true">
+                                Aktif
+                            </option>
+                            <option i18n value="false">
+                                Pasif
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label i18n class="control-label text-blue">
+                            Yetki
+                        </label>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label i18n class="checkbox" style="width: 70px;">
+                                    <input name="hasManagerClaim" id="hasManagerClaim" type="checkbox" [disabled]="!isAdmin"
+                                           [(ngModel)]="selectedSupplierUser.hasManagerClaim" />
+                                    Yönetici
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label i18n class="checkbox" style="width: 60px;">
+                                    <input name="hasFinanceClaim" id="hasFinanceClaim" type="checkbox"
+                                           [(ngModel)]="selectedSupplierUser.hasFinanceClaim" />
+                                    Finans
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label i18n class="checkbox" style="width: 130px;">
+                                    <input name="hasRepClaim" id="hasRepClaim" type="checkbox"
+                                           [(ngModel)]="selectedSupplierUser.hasRepClaim" />
+                                    Müşteri Temsilcisi
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button i18n class="btn btn-primary" name="save" type="submit" [disabled]="saveForm.invalid || isSaveDisabled" (click)="checkIfUserExistsAndSave();">
+                                Kaydet
+                            </button>
+                            <spinner [enabled]="isSaveDisabled"></spinner>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </xmodal>
+        <!--<input type="button" value="Click Me !!!" [popover]="fooPopup" />
+        <input type="button" value="Click YOU !!!" popover="fooPopup" />
+        <input type="button" value="Show/Hide" (click)="fooPopup.show();" />-->
+        <!--<popover-content #fooPopup placement="right" [animation]="false">
+            <div class="form-group ">
+                <label i18n class="control-label " for="select">
+                    Durum :
+                </label>
+                <select class="select form-control" [(ngModel)]="filterStatus" id="filter_status" name="filter_status">
+                    <option i18n [ngValue]="0">
+                        Hepsi
+                    </option>
+                    <option i18n [ngValue]="1">
+                        Aktifler
+                    </option>
+                    <option i18n [ngValue]="2">
+                        Pasifler
+                    </option>
+                </select>
+            </div>
+            <div style="margin-top: 50px;">
+                <button i18n class="btn btn-primary" name="filter" (click)="getSupplierUsers(); showFilter = !showFilter;">
+                    Uygula
+                </button>
+                <span (click)="fooPopup.hide();">Close</span>
+            </div>
+        </popover-content>-->
+
+    </div>
+    <simple-notifications [options]="notifyOptions"></simple-notifications>
+</div>

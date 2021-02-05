@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfEntityState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EntityState" nillable="true" type="tns:EntityState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEntityState" nillable="true" type="tns:ArrayOfEntityState" />
+  <xs:complexType name="EntityState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityStateRef" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityState" nillable="true" type="tns:EntityState" />
+  <xs:complexType name="ArrayOfMemberState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MemberState" nillable="true" type="tns:MemberState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMemberState" nillable="true" type="tns:ArrayOfMemberState" />
+  <xs:complexType name="MemberState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MemberStateRef" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberState" nillable="true" type="tns:MemberState" />
+  <xs:complexType name="ArrayOfLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lookup" nillable="true" type="tns:Lookup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookup" nillable="true" type="tns:ArrayOfLookup" />
+  <xs:complexType name="Lookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ref" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lookup" nillable="true" type="tns:Lookup" />
+</xs:schema>

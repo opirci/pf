@@ -1,0 +1,23 @@
+﻿<p>
+    <em>Hello Claim-User</em>
+</p>
+<form #form="ngForm" novalidate class="form-inline">
+    <div class="form-group">
+        <label>UserName:</label>
+        <!--<userSearch></userSearch>-->
+        <autoComplete [url]="userSearchUrl" (autoCompleteFunc)="setUser($event);"></autoComplete>
+    </div>
+    <div class="form-group">
+        <label>ValidFrom:</label>
+        <!--<my-date-picker [options]="myDatePickerInlineOptions" (dateChanged)="onDateChanged($event)" [locale]="locale"></my-date-picker>-->
+    </div>
+    <div class="form-group">
+        <label>ValidTo</label>
+        <!--<my-date-picker [options]="myDatePickerInlineOptions" (dateChanged)="onDateChanged($event)" [locale]="locale"></my-date-picker>-->
+    </div>
+
+</form>
+<br />
+<br />
+<br />
+<br />

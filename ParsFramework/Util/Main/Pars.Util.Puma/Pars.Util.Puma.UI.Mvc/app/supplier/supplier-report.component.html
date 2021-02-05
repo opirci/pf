@@ -1,0 +1,98 @@
+﻿<div class="container-fluid">
+    <msg-text i18n-value #msgYouDoNotHavePermissionToList name="msgYouDoNotHavePermissionToList" value="Listelemek için yetkiniz yok"></msg-text>
+    <msg-text i18n-value #msgNoRecordsFound name="msgNoRecordsFound" value="Kayıt bulunamadı"></msg-text>
+    <msg-text i18n-value #msgErrorReadingReport name="msgErrorReadingReport" value="Rapor okunurken hata oluştu"></msg-text>
+    <div #headerDiv name="headerDiv" id="headerDiv" class="panel panel-default">
+        <div class="panel-heading">
+            <h2 i18n class="panel-title">
+                Tedarikçi Raporu
+                <a href="#header-body" aria-expanded="true" class="btn btn-box-tool pull-right" data-toggle="collapse">Gizle/Göster</a>
+            </h2>
+        </div>
+        <div id="header-body" class="panel-body">
+            <div class="form-group">
+                <label i18n class="text-blue" for="supplierType">
+                    Cari Tip
+                </label>
+                <select i18n-placeholder class="select form-control" [(ngModel)]="supplierType.selectedValue.Ref" placeholder="Cari Tip" id="supplierType" name="supplierType" style="width: 30%;">
+                    <option value="0">....</option>
+                    <option *ngFor="let item of supplierType.values" value="{{item.Ref}}">
+                        {{item.Name}}
+                    </option>
+                </select>
+                <spinner [enabled]="supplierType?.isReading"></spinner>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button i18n type="button" class="btn btn-primary" [disabled]="gettingSuppierLines || !canGetList" (click)="getSupplierLines()"
+                            data-toggle="tooltip" [title]="canGetList ? '' : msgYouDoNotHavePermissionToList.value">
+                        Listele
+                    </button>
+                    <!--<button *ngIf="gridService?.data" i18n type="button" class="btn btn-success" style="color:black" (click)="export()" [disabled]="gridService.exportInProgress" >
+            Dışaver
+        </button>-->
+                    <lcw-export-button #exportButton i18n-text *ngIf="gridService?.data" buttonClass="btn btn-primary"  text="Dışa aktar" (export)="export(exportButton.exportAs)"></lcw-export-button>
+                    <spinner [enabled]="gettingSuppierLines"></spinner>
+                </div>
+            </div>
+
+            <div class="form-group" *ngIf="testMode">
+                <button i18n type="button" class="btn btn-primary" (click)="getDataBack()">
+                    Get Back
+                </button>
+            </div>
+
+            <!--<div *ngIf="reportLines" class="col-md-3">
+                <div class="form-group">
+                    <button i18n type="button" class="btn btn-success btn-default"
+                            (click)="printSupplierLines();">
+                        Print
+                    </button>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div id="report" name="report" class="row">
+        <!--<xgrid i18n-gridTitle [data]="reportLines" [dataSource]="dataSource" [excelExport]="true" [autoGenerateColumns]="true"
+               (selectFunc)="selectFromGrid($event)" [enableSelectColumn]="true" [printable]="printable"
+               [isEditable]="true"
+               gridTitle="Tedarikçi Raporu">-->
+        <!--<xcolumn fieldName="country" [isHidden]="true"></xcolumn>-->
+        <!--</xgrid>-->
+        <!--<xgrid #grid i18n-gridTitle [data]="reportLines" [dataSource]="dataSource" [excelExport]="true"
+               [showHeader]="reportLines != null" columnHeaderStyle="color:#3c6eac;" exportButtonClass="btn btn-success"
+               exportButtonStyle="color: black;" gridTitle="Tedarikçi Raporu">-->
+        <lcw-grid #grid i18n-gridTitle [gridService]="gridService" [showHeader]="gridService?.data != null"
+                  columnHeaderStyle="color:#3c6eac;" gridTitle="Tedarikçi Raporu">
+            <lcw-grid-column i18n-headerName headerName="Tedarikçi Kod" fieldName="supplierCode">
+                <!--<div class="form-group">
+                    <button i18n type="button" class="btn btn-success btn-default"
+                            (click)="printSupplierLines1();">
+                        Print
+                    </button>
+                </div>-->
+            </lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Tedarikçi Tipi" fieldName="supplierType">
+                Merhaba
+            </lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Tedarikçi Adı" fieldName="supplierName"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Ülke" fieldName="country">
+
+            </lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Segment" fieldName="segmentName"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Alt Segment" fieldName="subSegmentName"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Kullanıcı Adı Soyadı" fieldName="userNameSurname"></lcw-grid-column>
+            <!--<xcolumn  i18n-headerName headerName="Kullanıcı Adı" fieldName="userName" dataType="text"></xcolumn>
+            <xcolumn  i18n-headerName headerName="Kullanıcı Soyadı" fieldName="userSurname" dataType="text"></xcolumn>-->
+            <lcw-grid-column i18n-headerName headerName="Kullanıcı ePosta" fieldName="userEmail"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName i18n-conversions headerName="Üyelik Durumu" fieldName="logonState" style="text-align: center;" conversions="true=Aktif;false=Pasif"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName i18n-conversions headerName="Admin" fieldName="isManager" style="text-align: center;" conversions="true=Evet;false=Hayır"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName i18n-conversions headerName="Finans" fieldName="isFinance" style="text-align: center;" conversions="true=Evet;false=Hayır"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName i18n-conversions headerName="Müş.Tems." fieldName="isRepresentative" style="text-align: center;" conversions="true=Evet;false=Hayır"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="İşlem Tarihi" fieldName="modifiedDate" format="date"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="İşlem Yapan Kullanıcı" fieldName="modifiedUser"></lcw-grid-column>
+        </lcw-grid>
+
+    </div>
+</div>

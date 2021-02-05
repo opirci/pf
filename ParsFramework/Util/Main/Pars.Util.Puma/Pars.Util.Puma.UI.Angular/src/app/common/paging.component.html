@@ -1,0 +1,6 @@
+﻿<ul class="pager">
+    <li><a (click)="previousPage();">Previous</a></li>
+    <li><a (click)="nextPage();">Next</a></li>
+</ul>
+<input [(ngModel)]="pageNumber" id="pageNumber" type="text" (change)="pageNumberChange()" style="width: 30px;" />
+<span> / {{pageCount}}</span>

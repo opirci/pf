@@ -1,0 +1,22 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Configuration" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Configuration" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".ts" #>
+export const fullUrl: string = "<#= GetPath() #>"; 
+<#+
+string GetPath() 
+{ 
+	string configPath = @"..\..\Web.config";
+	configPath = this.Host.ResolvePath(configPath);
+	ExeConfigurationFileMap configFileMap = new ExeConfigurationFileMap();
+	configFileMap.ExeConfigFilename = configPath;
+	Configuration config = ConfigurationManager.OpenMappedExeConfiguration(configFileMap, ConfigurationUserLevel.None);
+	string appServer = config.AppSettings.Settings["appServer"].Value;
+	string appUrl = config.AppSettings.Settings["appUrl"].Value;
+	return appServer + appUrl;
+}#>
+

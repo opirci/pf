@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="600c8bd0-5fca-4560-8e17-b1c0c57a5c85" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmailTemplateService.xsd" MetadataType="Schema" ID="f768d31a-deb9-4cb3-a49f-b1f6ffe8df3e" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmailTemplateService1.xsd" MetadataType="Schema" ID="5a9c2984-8455-432c-8c16-80f1710a6467" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd4" />
+    <MetadataFile FileName="EmailTemplateService2.xsd" MetadataType="Schema" ID="e607feac-fee6-43fa-8566-a11d5105c1c1" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmailTemplateService3.xsd" MetadataType="Schema" ID="be23fcae-5da6-4675-b01b-bb5dfd895cb3" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd5" />
+    <MetadataFile FileName="EmailTemplateService4.xsd" MetadataType="Schema" ID="8e514458-b56a-4a88-a500-3e86d6177c9a" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EmailTemplateService.disco" MetadataType="Disco" ID="fb4b0599-e87a-4b68-a9c9-47d8d5013f24" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?disco" />
+    <MetadataFile FileName="EmailTemplateService.wsdl" MetadataType="Wsdl" ID="2aff3f4b-0bc6-46ac-b030-f5ce32c4dab5" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?wsdl" />
+    <MetadataFile FileName="EmailTemplateService5.xsd" MetadataType="Schema" ID="f94b58af-165a-47d0-a9b5-8195f383848d" SourceId="1" SourceUrl="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

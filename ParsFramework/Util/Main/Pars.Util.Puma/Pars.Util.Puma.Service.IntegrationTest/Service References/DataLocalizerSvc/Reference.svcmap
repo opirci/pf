@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b78b9abb-0b32-4fa3-8e3c-4ec00142dede" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataLocalizerService.disco" MetadataType="Disco" ID="7136f692-8b90-4082-b9a3-55278a685477" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?disco" />
+    <MetadataFile FileName="DataLocalizerService.xsd" MetadataType="Schema" ID="a5b244de-44b4-4140-8a8b-83315cc368e7" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataLocalizerService1.xsd" MetadataType="Schema" ID="a5917e91-a88a-4957-839d-1d986fb0df21" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DataLocalizerService.wsdl" MetadataType="Wsdl" ID="df5f16b7-1667-40fc-8431-0ce1f6391a00" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?wsdl" />
+    <MetadataFile FileName="DataLocalizerService2.xsd" MetadataType="Schema" ID="f54fc246-aeef-402c-8ba8-9a97908144c5" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataLocalizerService3.xsd" MetadataType="Schema" ID="506c99fc-364c-42f0-9e24-bee0b3568d79" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataLocalizerService4.xsd" MetadataType="Schema" ID="c4d809cb-b65c-4754-a715-d0dab608e912" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataLocalizerService5.xsd" MetadataType="Schema" ID="5ecc3739-2b39-4785-8460-397ec2a81a7b" SourceId="1" SourceUrl="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

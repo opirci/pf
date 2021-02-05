@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Core.Contract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/Service/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="StandardFaultContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FaultId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StandardFaultContract" nillable="true" type="tns:StandardFaultContract" />
+</xs:schema>

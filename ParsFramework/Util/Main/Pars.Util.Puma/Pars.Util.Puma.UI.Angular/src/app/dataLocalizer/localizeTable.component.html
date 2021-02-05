@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <msg-text i18n-value #msgWarningTitle name="msgWarningTitle" value="Uyarı"></msg-text>
+    <msg-text i18n-value #msgNoRecordsFound name="msgNoRecordsFound" value="Kayıt bulunamadı"></msg-text>
+    <msg-text i18n-value #msgErrorOccured name="msgErrorOccured" value="Hata oluştu!"></msg-text>
+    <msg-text i18n-value #msgSuccessHeader name="msgSuccessHeader" value="Bilgi"></msg-text>
+    <msg-text i18n-value #msgSuccessContent name="msgSuccessContent" value="Bilgiler başarıyla kaydedildi"></msg-text>
+    <msg-text i18n-value #msgErrorHeader name="msgErrorHeader" value="Hata"></msg-text>
+    <msg-text i18n-value #msgErrorContent name="msgErrorContent" value="Bilgiler kaydedilirken bir hata oluştu"></msg-text>
+
+    <div class="col-md-3">
+        <selection (loadFunc)="load($event)" (onSave)="save($event)" [canSave]="gridService?.hasData"
+                   [canExport]="gridService?.hasData"
+                   (onImport)="import($event)">
+            Servers are loading...     
+        </selection>
+    </div>
+
+    <div *ngIf="gridService?.hasData" class="row">
+        <div class="panel panel-default">
+            <div i18n class="panel-heading text-bold">Localization Data</div>
+            <div class="panel-body">
+                <div style="float: left;">
+                    <lcw-grid #grid1 i18n-gridTitle i18n-selectText gridTitle="Lokalizasyon Listesi" [gridService]="gridService"
+                           enableSelectColumn="false" [autoGenerateColumns]="true" [exportHiddenColumns]="true" [isEditable]="true"
+                           [excelExport]="true" [showHeader]="true" exportButtonClass="btn btn-success" exportButtonStyle="color: #fff;">
+                        <lcw-grid-column fieldName="ObjectRef" [isHidden]="true"></lcw-grid-column>
+                    </lcw-grid>
+                </div>
+            </div>
+        </div>
+    </div>
+    <simple-notifications [options]="notifyOptions"></simple-notifications>
+</div>

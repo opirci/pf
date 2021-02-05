@@ -1,0 +1,49 @@
+﻿<form #form="ngForm" novalidate class="form-inline" style="margin-left: 15px">
+    <div class="form-group">
+        <label i18n>Role</label>
+        <label i18n *ngIf="searchContaining">İçeren</label>
+        <label i18n *ngIf="searchContaining != true">Başlayan</label>
+        <input type="checkbox" [checked]="searchContaining" (change)="searchContaining = !searchContaining" />
+        <autoComplete [url]="roleSearchUrl" (autoCompleteFunc)="setRole($event);"></autoComplete>
+    </div>
+
+    <div class="form-group" style="display: none">
+        <label i18n> Rol Ref :</label>
+        <label>{{selectedRoleRelation.relationRef}}</label>
+    </div>
+    <div class="form-group">
+        <label i18n> Rol Adı:</label>
+        <input i18n-placeholder class="form-control" required [(ngModel)]="selectedRoleRelation.name" placeholder="Rol adı girmeniz bekleniyor" name="name" id="name" #name />
+    </div>
+    <div class="form-group">
+        <label> Açıklama :</label>
+        <input i18n-placeholder class="form-control" required [(ngModel)]="selectedRoleRelation.localeData.Value" placeholder="Açiklama girmeniz gerekiyor" name="description" id="description" #description />
+    </div>
+    <div class="form-group">
+        <label i18n>Durum :</label>
+        <select class="form-control" name="entityState" (change)="selectedEntityChanged(selectedEntityState,$event.target.value);"
+                [ngModel]="selectedRole.entityState.Description">
+            <option *ngFor="let ent of entityStates">
+                {{ent.Description}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button i18n type="submit" class="btn btn-success" (click)="save();" style="margin-top: 25px;" [disabled]="form.invalid">Kaydet</button>
+        <!--<button i18n class="btn btn-info" (click)="newClaim();" style="margin-top: 25px;">Yeni</button>-->
+    </div>
+</form>
+<simple-notifications [options]="notifyOptions"></simple-notifications>
+<div class="panel-body">
+    <grid [url]="roleRelationsUrl" [jsonDataName]="gridJsonDataName" pageSize="10" i18n-gridTitle gridTitle="Claim in Rolleri" i18n-selectText selectText="Güncelle"(pageFunc)="getDataFromPaging($event)" (selectFunc)="selectFromGrid($event)" #paging>
+        <column i18n-headerName headerName="Name" fieldName="name"></column>
+        <column i18n-headerName headerName="Explanation" fieldName="localeData.Value"></column>
+        <column i18n-headerName headerName="Member State" fieldName="memberState.Name"></column>
+        <column i18n-headerName headerName="Valid From" fieldName="validFrom"></column>
+        <column i18n-headerName headerName="Valid To" fieldName="validTo"></column>
+        <column i18n-headerName headerName="Created Date" fieldName="createdDate"></column>
+        <column i18n-headerName headerName="Created User" fieldName="createdUserRef"></column>
+        <column i18n-headerName headerName="Modified Date" fieldName="modifiedDate"></column>
+        <column i18n-headerName headerName="Modified User" fieldName="modifiedUserRef"></column>
+    </grid>
+</div>

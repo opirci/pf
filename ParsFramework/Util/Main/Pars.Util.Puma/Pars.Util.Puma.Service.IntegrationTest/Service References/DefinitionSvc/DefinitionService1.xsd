@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+  <xs:complexType name="GetEntityStatesResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="EntityStates" nillable="true" type="q1:ArrayOfEntityState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetEntityStatesResponse" nillable="true" type="tns:GetEntityStatesResponse" />
+  <xs:complexType name="MemberStateListResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="MemberStates" nillable="true" type="q2:ArrayOfMemberState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberStateListResponse" nillable="true" type="tns:MemberStateListResponse" />
+</xs:schema>

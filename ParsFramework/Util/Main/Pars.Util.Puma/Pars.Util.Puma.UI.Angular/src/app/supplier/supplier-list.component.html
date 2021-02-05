@@ -1,0 +1,171 @@
+﻿<div class="container-fluid">
+    <msg-text i18n-value #msgWarning name="msgWarning" value="Uyarı"></msg-text>
+    <msg-text i18n-value #msgError name="msgError" value="Hata"></msg-text>
+    <msg-text i18n-value #msgNoRecordsFound name="msgNoRecordsFound" value="Kayıt bulunamadı"></msg-text>
+    <msg-text i18n-value #msgErrorReadingSuppliers name="msgErrorReadingSuppliers" value="Tedarikçiler okunurken bir hata oluştu"></msg-text>
+    <msg-text i18n-value #msgLoading name="msgLoading" value="Yükleniyor..."></msg-text>
+    <msg-text i18n-value #msgMustSelectSupplierType name="msgMustSelectSupplierType" value="Cari tipi seçmelisiniz"></msg-text>
+    <msg-text i18n-value #msgCannotSelectDueToSupplierTypeIsService name="msgCannotSelectDueToSupplierTypeIsService" value="Cari tipi Hizmet seçili olduğu için seçemezsiniz"></msg-text>
+
+    <div #headerDiv name="headerDiv" id="headerDiv" class="panel panel-default">
+        <div class="panel-heading">
+            <h2 i18n class="panel-title">
+                Tedarikçi Listesi
+                <a href="#header-body" aria-expanded="true" class="btn btn-box-tool pull-right" data-toggle="collapse">Gizle/Göster</a>
+            </h2>
+        </div>
+        <div id="header-body" class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label i18n class="text-blue" for="supplierCode">
+                            Cari Kodu
+                        </label>
+                        <input i18n-placeholder class="form-control" [(ngModel)]="filter.supplierCode" placeholder="Cari Kod" id="supplierCode" name="supplierCode" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="supplierType">
+                            Cari Tip
+                        </label>
+                        <select i18n-placeholder class="select form-control" [(ngModel)]="filter.supplierType.selectedValue.Ref" placeholder="Cari Tip" id="supplierType" name="supplierType">
+                            <option value="0">....</option>
+                            <option *ngFor="let item of filter.supplierType.values" value="{{item.Ref}}">
+                                {{item.Name}}
+                            </option>
+                        </select>
+                        <spinner [enabled]="filter?.supplierType?.isReading"></spinner>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="subSegment">
+                            Alt Segment
+                        </label>
+
+                        <select i18n-placeholder class="select form-control" required [(ngModel)]="filter.subSegment.selectedValue.Ref" placeholder="Alt Segment" id="subSegment" name="subSegment"
+                                [disabled]="filter.supplierTypeIsService"
+                                data-toggle="tooltip"
+                                [title]="filter.supplierTypeIsService ? msgCannotSelectDueToSupplierTypeIsService.value : ''">
+                            <option value="0">....</option>
+                            <option *ngFor="let item of filter.subSegment.values" value="{{item.Ref}}">
+                                {{item.Name}}
+                            </option>
+                        </select>
+                        <spinner [enabled]="filter?.subSegment?.isReading"></spinner>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="ageSexGroup">
+                            Yaş Grubu
+                        </label>
+                        <select i18n-placeholder class="select form-control" [(ngModel)]="filter.ageSexGroup.selectedValue.Ref" placeholder="Yaş Grubu" id="ageSexGroup" name="ageSexGroup"
+                                [disabled]="filter.supplierTypeIsService"
+                                data-toggle="tooltip"
+                                [title]="filter.supplierTypeIsService ? msgCannotSelectDueToSupplierTypeIsService.value : ''">
+                            <option value="0">....</option>
+                            <option *ngFor="let item of filter.ageSexGroup.values" value="{{item.Ref}}">
+                                {{item.Name}}
+                            </option>
+                        </select>
+                        <spinner [enabled]="filter?.ageSexGroup?.isReading"></spinner>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="supplierName">
+                            Cari Adi
+                        </label>
+                        <input i18n-placeholder class="form-control" [(ngModel)]="filter.supplierName" placeholder="Cari Adı" id="supplierName" name="supplierName" type="text" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="segment">
+                            Segment
+                        </label>
+                        <select i18n-placeholder class="select form-control" [(ngModel)]="filter.segment.selectedValue.Ref" placeholder="Segment" id="segment" name="segment"
+                                [disabled]="filter.supplierTypeIsService"
+                                data-toggle="tooltip"
+                                [title]="filter.supplierTypeIsService ? msgCannotSelectDueToSupplierTypeIsService.value : ''">
+                            <option value="0">....</option>
+                            <option *ngFor="let item of filter.segment.values" value="{{item.Ref}}">
+                                {{item.Name}}
+                            </option>
+                        </select>
+                        <spinner [enabled]="filter?.segment?.isReading"></spinner>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group ">
+                        <label i18n class="text-blue" for="businessLine">
+                            İş Kolu
+                        </label>
+                        <select i18n-placeholder class="select form-control" [(ngModel)]="filter.businessLine.selectedValue.Ref" placeholder="İş Kolu" id="businessLine" name="businessLine"
+                                [disabled]="filter.supplierTypeIsService"
+                                data-toggle="tooltip"
+                                [title]="filter.supplierTypeIsService ? msgCannotSelectDueToSupplierTypeIsService.value : ''">
+                            <option value="0">....</option>
+                            <option *ngFor="let item of filter.businessLine.values" value="{{item.Ref}}">
+                                {{item.Name}}
+                            </option>
+                        </select>
+                        <spinner [enabled]="filter?.businessLine?.isReading"></spinner>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group" style="margin-top: 30px;">
+                        <input type="checkbox" name="suppliersWithNoUsers" [(ngModel)]="filter.suppliersWithNoUsers" id="suppliersWithNoUsers">
+                        <label i18n class="text-blue" for="suppliersWithNoUsers">
+                            Kullanıcısı Olmayan Carileri Getir
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <button i18n type="button" class="btn btn-primary" [disabled]="!filter.supplierTypeIsSelected || gettingSuppiers" (click)="getSuppliers()"
+                            data-toggle="tooltip"
+                            [title]="filter.supplierTypeIsSelected ? '' : msgMustSelectSupplierType.value">
+                        Listele
+                    </button>
+
+                    <button i18n type="button" class="btn btn-primary" (click)="clearFilters()">
+                        Filtreleri Temizle
+                    </button>
+
+                    <!--<button type="button" class="btn btn-google" (click)="test(false)">
+                        Test Değiş
+                    </button>
+
+                    <button type="button" class="btn btn-google" (click)="test(true)">
+                        Test Ekle
+                    </button>-->
+                </div>
+                <spinner size="medium" [enabled]="gettingSuppiers"></spinner>
+            </div>
+        </div>
+    </div>
+    <div id="report" name="report" class="row">
+        <!--columnHeaderStyle="text-align: right; background-color: powderblue;"-->
+        <!--[data]="suppliers" [dataSource]="dataSource"-->
+        <lcw-grid [pageSize]="pageSize"  [isEditable]="false" [gridService]="gridService"
+               [pagingOnTop]="true" [showHeader]="gridService?.data != null"
+               [showLineNumbers]="false"
+               [enablePaging]="true" (onSelect)="selectFromGrid($event)" [enableSearchBar]="false" [enableSelectColumn]="true" [autoGenerateColumns]="false"
+               [onColumnInitializing]="gridColumnInit"
+               i18n-gridTitle gridTitle="Tedarikçi Listesi"
+               i18n-selectText selectText="Güncelle"
+               columnHeaderStyle="color:#3c6eac;">   
+            <lcw-grid-column i18n-headerName headerName="Id" fieldName="supplierRef" headerStyle="color:#3c6eac"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Kodu" fieldName="supplierCode" headerStyle="color:#3c6eac"></lcw-grid-column>
+            <lcw-grid-column i18n-headerName headerName="Adı" fieldName="name" headerStyle="color:#3c6eac"></lcw-grid-column>
+        </lcw-grid>
+    </div>
+    <simple-notifications [options]="notifyOptions"></simple-notifications>
+</div>

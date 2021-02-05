@@ -1,0 +1,21 @@
+﻿<div class="form-group">
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" style="height: 30px;" [(ngModel)]="selectedItem.Name" class="form-control" />
+</div>
+<div style="z-index: 9999; margin-left: 80px; position: fixed; height: 200px; width: 250px;" class="pre-scrollable" *ngIf="Items">
+    <!--<div *ngFor="let item of Items" class="search-result" (click)="selectItem(item)">
+        {{item.Name}}
+    </div>-->
+
+    <table *ngIf="Items" class="table table-striped table-hover table-condensed table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of Items" (click)="selectItem(item)">
+                <td>{{ item.Name }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

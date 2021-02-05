@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Request" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/Service/UserServicePublic.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Service" />
+  <xs:complexType name="SetUserClaimRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Claim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SetUserClaimRequest" nillable="true" type="tns:SetUserClaimRequest" />
+  <xs:complexType name="SetUserGroupClaimRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Claim" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserGroupClaimRequest" nillable="true" type="tns:SetUserGroupClaimRequest" />
+  <xs:complexType name="SetRoleClaimRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q2:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Claim" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetRoleClaimRequest" nillable="true" type="tns:SetRoleClaimRequest" />
+  <xs:complexType name="SetUserRoleRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q3:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserRoleRequest" nillable="true" type="tns:SetUserRoleRequest" />
+  <xs:complexType name="SetUserUserGroupRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q4:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DomainName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserGroupName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserUserGroupRequest" nillable="true" type="tns:SetUserUserGroupRequest" />
+</xs:schema>

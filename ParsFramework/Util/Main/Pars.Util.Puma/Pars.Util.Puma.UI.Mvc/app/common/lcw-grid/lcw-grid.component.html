@@ -1,0 +1,181 @@
+﻿<input i18n #selc type="hidden" value="Select" />
+<div class="box">
+    <div *ngIf="showHeader == true" class="box-header xgrid-header">
+        <h3 class="box-title">{{gridTitle}}</h3>
+        <!--<div *ngIf="excelExport === true && hasData" class="box-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+                <div class="btn-group">
+                    <button class="btn btn-default" [ngStyle]="exportButtonStyleInstance" [ngClass]="exportButtonClass" (click)="exportTo()">Export </button>
+                    <button class="btn btn-default dropdown-toggle" [ngStyle]="exportButtonStyleInstance" [ngClass]="exportButtonClass" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li [ngClass]="exportAsStyle(ExportFormat.ExcelXlsx)"><a (click)="setexportTo(ExportFormat.ExcelXlsx)">XLSX</a></li>
+                        <li [ngClass]="exportAsStyle(ExportFormat.ExcelCsvComma)"><a (click)="setexportTo(ExportFormat.ExcelCsvComma)">CSV (,)</a></li>
+                        <li [ngClass]="exportAsStyle(ExportFormat.ExcelCsvSemiColumn)"><a (click)="setexportTo(ExportFormat.ExcelCsvSemiColumn)">CSV (;)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <div *ngIf="excelExport === true && hasData" class="box-tools">
+            <lcw-export-button #exportButton [buttonStyle]="exportButtonStyle" [buttonClass]="exportButtonClass"
+                               (export)="exportClicked(exportButton.exportAs)"></lcw-export-button>
+        </div>
+        <div *ngIf="enableSearchBar === true" class="box-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+
+                <input type="text" name="table_search" id="table_search" (keypress)="$event.keyCode == 13 ? addSearchParameter(table_search.value) : null" #table_search class="form-control pull-right" i18n-placeholder placeholder="Search" />
+                <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default" (click)="addSearchParameter(table_search.value);">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button *ngIf="showSettings" type="button" title="Settings" class="glyphicon glyphicon-cog" (click)="showSettingsDailog();" style="float: right;"></button>
+        <xmodal *ngIf="settingsDialogVisible" [(visible)]="settingsDialogVisible">
+            <h3 i18n style="border-bottom: solid black 1px;">Grid Settings</h3>
+            <div class="form-group">
+                <label i18n class="control-label" for="line-num">
+                    Show Line Numbers:
+                </label>
+                <input type="checkbox" class="line-num" [(ngModel)]="dialogSettings.showLineNumbers" />
+            </div>
+            <div class="form-group ">
+                <label i18n class="control-label" for="select">
+                    Export Format:
+                </label>
+                <select class="select form-control" [(ngModel)]="dialogSettings.exportAs">
+                    <option i18n [ngValue]="ExportFormat.ExcelXlsx">
+                        XLS
+                    </option>
+                    <option i18n [ngValue]="ExportFormat.ExcelCsvComma">
+                        CSX (,)
+                    </option>
+                    <option i18n [ngValue]="ExportFormat.ExcelCsvSemiColumn">
+                        CSX (;)
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label i18n class="control-label" for="hor-scr">
+                    Horizontal Scroll:
+                </label>
+                <input type="checkbox" class="hor-scr" [(ngModel)]="dialogSettings.horizontalScroll" />
+            </div>
+            <div class="form-group">
+                <label i18n class="control-label" for="ver-scr">
+                    Vertical Scroll / Lines:
+                </label>
+                <input type="checkbox" class="ver-scr" [(ngModel)]="dialogSettings.verticalScroll" />
+                <input type="number" class="ver-scr" style="width: 60px;" [(ngModel)]="dialogSettings.verticalScrollRowsToShow" />
+            </div>
+
+            <div class="form-group">
+                <label i18n class="control-label" for="paging">
+                    Paging On Top / Page Size:
+                </label>
+                <input type="checkbox" class="paging" [(ngModel)]="dialogSettings.pagingOnTop" />
+                <input type="number" class="paging" style="width: 60px;" [(ngModel)]="dialogSettings.pageSize" />
+            </div>
+
+            <div style="margin-top: 50px;">
+                <button i18n class="btn btn-primary" name="save" (click)="saveSettings(); ">
+                    Save
+                </button>
+
+                <button i18n class="btn btn-danger" name="save" (click)="saveSettings(); ">
+                    Clear
+                </button>
+            </div>
+        </xmodal>
+        <lcw-grid-paging *ngIf="hasData && enablePaging == true && pagingOnTop == true" [hidePageNumbers]="true" [previousText]="previousText" [nextText]="nextText" [(pageNumber)]="pageNumber" [totalCount]="gridData?.totalCount" [pageCount]="pageCount" (onNext)="nextPage();"
+                         (onPrevious)="previousPage()" (gotoPage)="pageNumberChange()"></lcw-grid-paging>
+    </div>
+    <form *ngIf="hasData" [formGroup]="fgridForm" novalidate (ngSubmit)="submitGrid(fgridForm)">
+        <div>
+            <table class="table table-striped table-hover table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th *ngIf="showLineNumbers == true" [ngStyle]="columnHeaderStyleInstance" style="resize: horizontal;">#</th>
+                        <ng-container *ngFor="let columnInfo of columnList">
+                            <ng-container *ngIf="!columnInfo.isHidden">
+                                <!--<template *ngIf="columnInfo.columnComponent" [ngTemplateOutlet]="columnInfo.columnComponent.templateRef">
+
+                                </template>-->
+                                <!--<th *lcwGridHeaderInternal="columnInfo.columnComponent"></th>-->
+                                <!--<th *ngIf="!columnInfo.columnComponent.hasTemplate" #plainHeader [ngStyle]="columnInfo.headerStyleInstance" style="resize: horizontal;">{{ columnInfo.headerName }}</th>-->
+                                <th *ngIf="!columnInfo?.columnComponent?.hasTemplate" #plainHeader [ngStyle]="columnInfo.headerStyleInstance" style="resize: horizontal;">{{ columnInfo.headerName }}</th>
+                            </ng-container>
+
+                        </ng-container>
+                        <th *ngIf="showSelectColumn == true" [ngStyle]="columnHeaderStyleInstance" style="resize: horizontal;">{{ selectText != null ? selectText : selc.value }}</th>
+                    </tr>
+                </thead>
+                <input type="hidden" formControlName="fpageNumber" [value]="pageNumber" />
+                <input type="hidden" formControlName="ftotalCount" [value]="gridData?.totalCount" />
+                <tbody formArrayName="frows">
+                    <tr *ngFor="let item of gridData; let i = index;" formGroupName="{{i}}">
+                        <td *ngIf="showLineNumbers === true" [ngStyle]="columnStyleInstance ? columnStyleInstance: {'width': '20px', 'color': 'initial' }" align="center">
+                            {{ ((pageNumber - 1) * pageSize) + i + 1 }}
+                        </td>
+                        <ng-container *ngFor="let columnInfo of columnList">
+                            <td *ngIf="!columnInfo.isHidden" #gcell [ngStyle]="columnInfo.valueStyleInstance ? columnInfo.valueStyleInstance : columnStyleInstance ? columnStyleInstance : { 'color': 'initial' }">
+                                <ng-container [ngSwitch]="TsType[columnInfo.dataType]">
+                                    <ng-container *ngSwitchCase="'boolean'">
+                                        <ng-container [ngSwitch]="BooleanViews[columnInfo.checkBooleanView(booleanView)]">
+                                            <ng-container *ngSwitchCase="'checkBox'">
+                                                <input *ngIf="columnInfo.isEditable === true" title="{{getColumnValue(item, columnInfo, true, gcell)}}" type="checkbox" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" />
+                                                <input *ngIf="columnInfo.isEditable === false" title="{{getColumnValue(item, columnInfo, true, gcell)}}" type="checkbox" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" onclick="return false;" />
+                                            </ng-container>
+                                            <ng-container *ngSwitchCase="'image'">
+                                                <ng-container *ngIf="columnInfo.isEditable === true">
+                                                    <input #chk title="{{getColumnValue(item, columnInfo, true, gcell)}}" type="checkbox" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" style="display: none; cursor: default" />
+                                                    <ul *ngIf="!chk.checked" class="glyphicon glyphicon-unchecked" (click)="chk.checked = !chk.checked"></ul>
+                                                    <ul *ngIf="chk.checked" class="glyphicon glyphicon-check" (click)="chk.checked = !chk.checked"></ul>
+
+                                                </ng-container>
+                                                <ng-container *ngIf="columnInfo.isEditable === false">
+                                                    <ul *ngIf="!getColumnValue(item, columnInfo, false, gcell)" class="glyphicon glyphicon-unchecked"></ul>
+                                                    <ul *ngIf="getColumnValue(item, columnInfo, false, gcell)" class="glyphicon glyphicon-check"></ul>
+                                                </ng-container>
+                                            </ng-container>
+                                            <ng-container *ngSwitchCase="'text'">
+                                                {{ getColumnValue(item, columnInfo, true, gcell) }}
+                                            </ng-container>
+                                        </ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'number'">
+                                        <input type="text" *ngIf="columnInfo.isEditable" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" style="display: table-cell; width: 100%" />
+                                        <ng-container *ngIf="!columnInfo.isEditable">{{ getColumnValue(item, columnInfo, true, gcell) }}</ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'date'">
+                                        <input type="text" *ngIf="columnInfo.isEditable" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" style="display: table-cell; width: 100%" />
+                                        <ng-container *ngIf="!columnInfo.isEditable">{{ getColumnValue(item, columnInfo, true, gcell) }}</ng-container>
+                                    </ng-container>
+                                    <ng-container *ngSwitchCase="'string'||'any'|| 'object' || undefined || null">
+                                        <input type="text" *ngIf="columnInfo.isEditable" [name]="columnInfo.fieldName" [formControlName]="columnInfo.fieldName" style="display: table-cell; width: 100%" />
+                                        <ng-container *ngIf="!columnInfo.isEditable">{{ getColumnValue(item, columnInfo, true, gcell) }}</ng-container>
+                                    </ng-container>
+                                </ng-container>
+                            </td>
+                        </ng-container>
+                        <td *ngIf="showSelectColumn === true" [ngStyle]="columnStyleInstance ? columnStyleInstance: { 'width': '20px', 'color': 'initial'}" align="center">
+                            <a class="btn btn-primary btn-sm" (click)="select(i);">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr *ngFor="let summary of summaries; let si = index; let lsi = last" [ngStyle]="si == 0 ? { 'border-top': 'ridge'} : si == lsi ? { 'border-bottom': 'ridge'}:{}">
+                        <td #summaryTd [attr.colspan]="getColumsToMerge(summary)">{{summary.title}}</td>
+                        <ng-container *ngFor="let columnInfo of columnList; let ci = index;">
+                            <td #sumCell *ngIf="ci>=getColumsToMerge(summary)">{{calculateSummary(columnInfo, summary, sumCell)}}</td>
+                        </ng-container>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>
+<lcw-grid-paging *ngIf="hasData && enablePaging == true" [previousText]="previousText" [nextText]="nextText" [(pageNumber)]="pageNumber" [totalCount]="gridData?.totalCount" [pageCount]="pageCount" (onNext)="nextPage();" (onPrevious)="previousPage()" (gotoPage)="pageNumberChange(pageNumber)"></lcw-grid-paging>

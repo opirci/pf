@@ -1,0 +1,1857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7e892ba15f2c6c17e83510e273b3e10fc32ea016" datatype="html">
+        <source>Search</source>
+        <target>Ara</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a7b33611d10c063415042077baaf5156f0fdcbc4" datatype="html">
+        <source>Grid Settings</source>
+        <target>Grid Ayarları</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="598be45b27884a6fd91eb381c632294cc6aed313" datatype="html">
+        <source>
+                    Show Line Numbers:
+                </source>
+        <target>
+                    Satır No Göster:
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="adcfde72e6565bc3b7fba98084a138be76cf5aa5" datatype="html">
+        <source>
+                    Export Format:
+                </source>
+        <target>
+                    Dışaver Biçimi:
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b4cd462dfd4d4eaa71d285d1e983856b9057bf1" datatype="html">
+        <source>
+                        XLS
+                    </source>
+        <target>
+                        XLS
+                    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="822cb1f17e2388c9a5d313a1cfba9b97d6115197" datatype="html">
+        <source>
+                        CSX (,)
+                    </source>
+        <target>
+                        CSX (,)
+                    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d81d3a951521f3c517f300ae199894de61fbf0e9" datatype="html">
+        <source>
+                        CSX (;)
+                    </source>
+        <target>
+                        CSX (;)
+                    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="38a05e17c468674d1b9f719a5bae8caa2f4f07f8" datatype="html">
+        <source>
+                    Horizontal Scroll:
+                </source>
+        <target>
+                    Yatay Kaydırma:
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c7926c1e607d1ffbf0c34fcd93bb970f86bba699" datatype="html">
+        <source>
+                    Vertical Scroll / Lines:
+                </source>
+        <target>
+                    Dikey Kaydırma / Satır Sayısı:
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="90c99fef2f729ff4e5121fde0993e16c9ab33110" datatype="html">
+        <source>
+                    Paging On Top / Page Size:
+                </source>
+        <target>
+                    Sayfalama Üstter / Sayfa Satır Sayısı:
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2fa313c798ad138557539ba3c6a3bfdc426eaaa2" datatype="html">
+        <source>
+                    Save
+                </source>
+        <target>
+                    Kaydet
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="432ba2d08b352929e3fef14e4894270a482bc9e1" datatype="html">
+        <source>
+                    Clear
+                </source>
+        <target>
+                    Temizle
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/xgrid.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-grid/lcw-grid.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3d3663d11436ad184f584707df2e1a5a2cfa67af" datatype="html">
+        <source>Yıl</source>
+        <target>Yıl</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/date-week.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/date-week.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4823b186b9c83ff7f4b33ffd0fe41e2bd372b5a9" datatype="html">
+        <source>Hafta</source>
+        <target>Hafta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/date-week.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/date-week.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="20425c4ada7801514176206fe0b724d8d9648a3f" datatype="html">
+        <source>Bitiş     </source>
+        <target>Bitiş     </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/date-week.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bc99ee70672a58f40d80e573ed9689265b177494" datatype="html">
+        <source>Tedarikçi Portalı</source>
+        <target>Tedarikçi Portalı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/app.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a3017841c01143a2c0596cfee9b22ed6f271dab1" datatype="html">
+        <source>Uyarı</source>
+        <target>Uyarı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="09f2efd463e34b2c06da2070aacba3a1e28a983a" datatype="html">
+        <source>Hata</source>
+        <target>Hata</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="68c391022a489e5c905ffb5cf91ce5e5481b622c" datatype="html">
+        <source>Kayıt bulunamadı</source>
+        <target>Kayıt bulunamadı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b708972ae51bb4a9feb5134d0b8ec2399a4c0228" datatype="html">
+        <source>Tedarikçiler okunurken bir hata oluştu</source>
+        <target>Tedarikçiler okunurken bir hata oluştu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9999da8e94703a5887de1c02a48c3bff74a2b32a" datatype="html">
+        <source>Yükleniyor...</source>
+        <target>Yükleniyor...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7ab6887cf856aef94d1041459e1768c80121487" datatype="html">
+        <source>Cari tipi seçmelisiniz</source>
+        <target>Cari tipi seçmelisiniz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="53c72491d00fffee4786896590b367dedd33bb5c" datatype="html">
+        <source>Cari tipi Hizmet seçili olduğu için seçemezsiniz</source>
+        <target>Cari tipi Hizmet seçili olduğu için seçemezsiniz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f43f31e746b8c35969ede4d42dbd4a505e13f682" datatype="html">
+        <source>
+                Tedarikçi Listesi
+                <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></source>
+        <target>
+          Tedarikçi Listesi
+          <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2bea55ec362d470a6d98369b43c65f1d6d2c914d" datatype="html">
+        <source>
+                            Cari Kodu
+                        </source>
+        <target>
+          Cari Kodu
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2b25d9313c0e4f11340cbb622f4be4ce312309db" datatype="html">
+        <source>Cari Kod</source>
+        <target>Cari Kod</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8459fd45958700cd84cd219a320065d3cfc082e9" datatype="html">
+        <source>
+                            Cari Tip
+                        </source>
+        <target>
+          Cari Tip
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b639f6ab7cbff8ac04356701a9b49a529c93be3b" datatype="html">
+        <source>Cari Tip</source>
+        <target>Cari Tip</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0d3f5de3498cb925ba9adb98fa41b5d3bd0bddb9" datatype="html">
+        <source>
+                            Alt Segment
+                        </source>
+        <target>
+                            Alt Segment
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bd8e6308eb396b97afef4001fd64712a8f095df8" datatype="html">
+        <source>Alt Segment</source>
+        <target>Alt Segment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="74de657bfe13b264870d451ebf89cb42d68fb764" datatype="html">
+        <source>
+                            Yaş Grubu
+                        </source>
+        <target>
+                            Yaş Grubu
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1b7fa7cce411ecf5825795bb16cbe8ca862daf9" datatype="html">
+        <source>Yaş Grubu</source>
+        <target>Yaş Grubu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="94bc9812a616f80d7d2d9c583d68161aae341464" datatype="html">
+        <source>
+                            Cari Adi
+                        </source>
+        <target>
+                            Cari Adi
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a06994540d79055b66ce4f7884cd922b3c095f56" datatype="html">
+        <source>Cari Adı</source>
+        <target>Cari Adı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8963adcebb789bfba029df5baa371c152025e0cd" datatype="html">
+        <source>
+                            Segment
+                        </source>
+        <target>
+                            Segment
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8fbd80a3ad0ce1c5dbc1bb371d3bad810599c51a" datatype="html">
+        <source>Segment</source>
+        <target>Segment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7d3c082515d32043046951476160d9eeffdebed2" datatype="html">
+        <source>
+                            İş Kolu
+                        </source>
+        <target>
+                            İş Kolu
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d0595b8b2732317468b83e428ff46b3a269d80a6" datatype="html">
+        <source>İş Kolu</source>
+        <target>İş Kolu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="14d2534a52ee60289fe64fdbba3bafc5340eb499" datatype="html">
+        <source>
+                            Kullanıcısı Olmayan Carileri Getir
+                        </source>
+        <target>
+          Kullanıcısı Olmayan Carileri Getir
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c117883ba7a4a01165d8b98c1622c006b4a8398" datatype="html">
+        <source>
+                        Listele
+                    </source>
+        <target>  
+                        Listele
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="03cf280ccab19621c6b97e2d716aeb639ba22f4e" datatype="html">
+        <source>
+                        Filtreleri Temizle
+                    </source>
+        <target>
+                        Filtreleri Temizle
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2798cc1e152b1ec07fd8daf94a2a073d1ba1ebcc" datatype="html">
+        <source>Id</source>
+        <target>Id</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="949742ffae996ff3ca8a3e5d6124a4a790a30f0c" datatype="html">
+        <source>Kodu</source>
+        <target>Kodu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2801826bf19738ff77ff8b67cb993d096a687053" datatype="html">
+        <source>Adı</source>
+        <target>Adı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e44ab4b5e0b103406fd8134cc9dbff3faec6b92b" datatype="html">
+        <source>Tedarikçi Listesi</source>
+        <target>Tedarikçi Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d0573efb6f03810111433a7b8bedbb781f1610c" datatype="html">
+        <source>Güncelle</source>
+        <target>Güncelle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-list.component.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="da55d0384e8ea91290e4ebb79aa0ef1ef254c162" datatype="html">
+        <source>Bilgi</source>
+        <target>Bilgi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0df175eec150fe595f2ae9b56a90a94292368747" datatype="html">
+        <source>Bilgiler başarıyla kaydedildi</source>
+        <target>Bilgiler başarıyla kaydedildi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca2645ecd544a57cf05ecfebfcc965a0a0b46fab" datatype="html">
+        <source>Bilgiler kaydedilirken bir hata oluştu</source>
+        <target>Bilgiler kaydedilirken bir hata oluştu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f5287721934e73c61df07c4bb891f37c2ef4a51a" datatype="html">
+        <source>Kullanıcı en az 1 yetkiye sahip olmalıdır!</source>
+        <target>Kullanıcı en az 1 yetkiye sahip olmalıdır!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1f3bca74314e93a32c57ee14f9f7b517fcba40de" datatype="html">
+        <source>Bu mail adresi ile daha önce kayıt yapılmış!</source>
+        <target>Bu mail adresi ile daha önce kayıt yapılmış!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="02a6bf55fd041e1d4f7f7ca7a2e7eb2a112d46b4" datatype="html">
+        <source>Tedarikçi Bilgileri</source>
+        <target>Tedarikçi Bilgileri</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="559f0e5f38127cab095952e22dce9d7293ee0690" datatype="html">
+        <source>Tedarikçi Kodu</source>
+        <target>Tedarikçi Kodu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8ccc81dd11b2caa9a86dfbfc9f9381245373e47d" datatype="html">
+        <source>Tedarikçi Adı</source>
+        <target>Tedarikçi Adı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30461d919a3d401411ddbc878c38be34168a733d" datatype="html">
+        <source>Ad Soyad</source>
+        <target>Ad Soyad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1a7c7794194ee4bd56277168f652f1acc0f39bc1" datatype="html">
+        <source>Eposta</source>
+        <target>Eposta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="98399f1e53fe551730aa7b55be304780ac328ab0" datatype="html">
+        <source>Filtreler</source>
+        <target>Filtreler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="781da9880bc97541dc7f196bf74546cd8de6c479" datatype="html">
+        <source>
+                        Durum :
+                    </source>
+        <target>
+                        Durum :
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a6cf58fb567c6d8fbe76e8bd9a5dbb74f60934b6" datatype="html">
+        <source>
+                            Hepsi
+                        </source>
+        <target>
+                            Hepsi
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f1c39aa125ca75844b927ce65a5928a495f9e88c" datatype="html">
+        <source>
+                            Aktifler
+                        </source>
+        <target>
+                            Aktifler
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7e7b95d511faa18136d97da19750615bd47af92c" datatype="html">
+        <source>
+                            Pasifler
+                        </source>
+        <target>
+                            Pasifler
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37a783c96e48e348c1b4ddb1d02468431ebc5838" datatype="html">
+        <source>
+                        Uygula
+                    </source>
+        <target>
+          Uygula
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="01cbb3f0ab67e835c191a55ed14165a03aec9388" datatype="html">
+        <source>Filtrele</source>
+        <target>Filtrele</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="effbc7164f1f892ffdf397a7c1fae93d2b90e292" datatype="html">
+        <source>Ad</source>
+        <target>Ad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bbec2f99d8652bc67ed5aa8fe7252185c7780db8" datatype="html">
+        <source>Soyad</source>
+        <target>Soyad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eb9aef4347294575893ac7c694b4d369ecc84216" datatype="html">
+        <source>Yönetici</source>
+        <target>Yönetici</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3fab535f883a93405dd8a9afdd30c4907e200142" datatype="html">
+        <source>true=Evet;false=Hayır</source>
+        <target>true=Evet;false=Hayır</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b271feeb3057b274886a52e599ef50d59f01e2cd" datatype="html">
+        <source>Finans</source>
+        <target>Finans</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="80bf5aa92e90e0ad38db4b80b9302df0ecf32a7c" datatype="html">
+        <source>Müşteri Temsil.</source>
+        <target>Müşteri Temsil.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e06e8f9f50beb0cd06f449e4934d264a76a584eb" datatype="html">
+        <source>Durum</source>
+        <target>Durum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7f58de8fb6f4e658050a4245b2eef96a4a6b932" datatype="html">
+        <source>true=Aktif;false=Pasif</source>
+        <target>true=Aktif;false=Pasif</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6cec65c4010b16bef863242edce2484f47729a74" datatype="html">
+        <source>Kullanıcı Listesi</source>
+        <target>Kullanıcı Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4bcf8d29cad8caa351adbe77e0ce6ae192b3282d" datatype="html">
+        <source>
+                            Yönetici Olarak Ata
+                        </source>
+        <target>
+                            Yönetici Olarak Ata
+                        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bdeed4b8fb39b12482f180317df3e66209b95940" datatype="html">
+        <source>
+                            Yeni
+                        </source>
+        <target>
+                            Yeni
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b8f938e85d43be306e6338350c6894fa7d3f8441" datatype="html">
+        <source>
+                            Ad
+                        </source>
+        <target>
+                            Ad
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cab468dd7303f0863af969989f3c1a1475740415" datatype="html">
+        <source>First Name is required</source>
+        <target>Ad gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5c8fff788ea3dbd86ebdb6e9c5703ac3589da628" datatype="html">
+        <source>
+                            Soyad
+                        </source>
+        <target>
+                            Soyad
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cc2e75a51145dfc8b511b8a47175f9b65f82d9c7" datatype="html">
+        <source>Last Name is required</source>
+        <target>Soyad gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee20c2341c5d1da5e4fee63bf346d06f0017c60c" datatype="html">
+        <source>
+                            Eposta
+                            <x id="START_TAG_SPAN" ctype="x-span" />
+                                *
+                            <x id="CLOSE_TAG_SPAN" ctype="x-span" /></source>
+        <target>
+          Eposta
+          <x id="START_TAG_SPAN" ctype="x-span" />
+          *
+          <x id="CLOSE_TAG_SPAN" ctype="x-span" /></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="69d8572ae205a7524110180fd29a8d277b11002e" datatype="html">
+        <source>Eposta girilmesi zorunludur</source>
+        <target>Eposta girilmesi zorunludur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="457a1a26ce9fb02cdb542ef591e9a24837eef9dc" datatype="html">
+        <source>
+                            Durum
+                        </source>
+        <target>
+                            Durum
+                        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fe7bccad0dc127839fab6a962e081481d622fd68" datatype="html">
+        <source>
+                                Aktif
+                            </source>
+        <target>
+                                Aktif
+                            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9366f7ee8a6ca7d0f0a0f3316752fdae2d2ca" datatype="html">
+        <source>
+                                Pasif
+                            </source>
+        <target>
+                                Pasif
+                            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d2de98f50ae0a2b3065595edf990b0708ec1e32f" datatype="html">
+        <source>
+                            Yetki
+                        </source>
+        <target>
+                            Yetki
+                        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="01d356793485b6d48efbd88495c77307436a7a52" datatype="html">
+        <source>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Yönetici
+                                </source>
+        <target>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Yönetici
+                                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5b71f4ea3c81c8173ee127eff17ee601311bf875" datatype="html">
+        <source>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Finans
+                                </source>
+        <target>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Finans
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60cdcad933faf394851a9638915eda56a7fe7ab5" datatype="html">
+        <source>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Müşteri Temsilcisi
+                                </source>
+        <target>
+          <x id="TAG_INPUT" ctype="x-input" />
+                                    Müşteri Temsilcisi
+                                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">191</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a5e194e9058b8980ff0091904b0b63239f2a6a9e" datatype="html">
+        <source>
+                                Kaydet
+                            </source>
+        <target>
+                                Kaydet
+                            </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-list.component.ts</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="358755ec552fdfb74a5ba95b671f52cf9850ed51" datatype="html">
+        <source>Listelemek için yetkiniz yok</source>
+        <target>Listelemek için yetkiniz yok</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2f2023dac84732c792adb478d34877bebf058167" datatype="html">
+        <source>Rapor okunurken hata oluştu</source>
+        <target>Rapor okunurken hata oluştu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0af5b37127dbec70970a6cbb6e43b37adcc5eae5" datatype="html">
+        <source>
+                Tedarikçi Raporu
+                <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></source>
+        <target>
+          Tedarikçi Raporu
+          <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="600ebd8b9a754d6ac039bc89a92f3f562d3c4d0b" datatype="html">
+        <source>
+                    Cari Tip
+                </source>
+        <target>
+                    Cari Tip
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="400a2e237c3af4a2dedef9ad12dc5fa55bd5e58b" datatype="html">
+        <source>Dışa aktar</source>
+        <target>Dışa Aktar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="941aa1c575f28606a55b41c073339e6cbafcd221" datatype="html">
+        <source>
+                    Get Back
+                </source>
+        <target>
+                    Get Back
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="51512f251f7be2c7632527d20c6fb1f537b59522" datatype="html">
+        <source>Tedarikçi Kod</source>
+        <target>Tedarikçi Kod</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="924cf8573e45356aff1f9449f7b4a5dd3817c17d" datatype="html">
+        <source>Tedarikçi Tipi</source>
+        <target>Tedarikçi Tipi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8caa28d75809ff32dc268897591df1b26e44671e" datatype="html">
+        <source>Ülke</source>
+        <target>Ülke</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e120341d24e7f5b39d9bdc243da3e12462ee0432" datatype="html">
+        <source>Kullanıcı Adı Soyadı</source>
+        <target>Kullanıcı Adı Soyadı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3476ec6f23c9d54791395695bcbfedb09f9d3898" datatype="html">
+        <source>Kullanıcı ePosta</source>
+        <target>Kullanıcı ePosta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d76d9801dbfd1e23d853af44d594f7e98927805" datatype="html">
+        <source>Üyelik Durumu</source>
+        <target>Üyelik Durumu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="408cb6073e60c5d966296a3207fc596adca75e01" datatype="html">
+        <source>Admin</source>
+        <target>Admin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="67eb4725255a3a40e09a270ac7ecda7e69d69165" datatype="html">
+        <source>Müş.Tems.</source>
+        <target>Müş.Tems.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a0d79d44ef7978ae5b1a0e8bd39d6ede5540c50d" datatype="html">
+        <source>İşlem Tarihi</source>
+        <target>İşlem Tarihi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="11e5e48b28cf636ba1fbc5ac1357752b38c40d19" datatype="html">
+        <source>İşlem Yapan Kullanıcı</source>
+        <target>İşlem Yapan Kullanıcı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54ad962d39f2496b39b4ed74a435b8df0bdc4dbf" datatype="html">
+        <source>Tedarikçi Raporu</source>
+        <target>Tedarikçi Raporu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-report.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="34e4b296835b385cb305333d10fa1c24491ebc78" datatype="html">
+        <source>Filitreler hatalı</source>
+        <target>Filitreler hatalı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62b4f0fc61a25ce218e950423f84c278b7878588" datatype="html">
+        <source>Tedarikçi Kullanıcı Login Raporu </source>
+        <target>Tedarikçi Kullanıcı Login Raporu </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="08ace1acc343d165dab0c46a27e01a182a4144ca" datatype="html">
+        <source>
+                Tedarikçi Kullanıcı Login Raporu
+                <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></source>
+        <target>
+                Tedarikçi Kullanıcı Login Raporu
+          <x id="START_LINK" ctype="x-a" />Gizle/Göster<x id="CLOSE_LINK" ctype="x-a" /></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="230504e8189a806add376da55680946df08c65ae" datatype="html">
+        <source>Rapor Tipi</source>
+        <target>Rapor Tipi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="86b9d719ed83c88b5c8a7ef50750066cb1e1c0e0" datatype="html">
+        <source>Login Sayısı</source>
+        <target>Login Sayısı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="81517bddaeccc18dd4c0dbf5a03593be9f9b6407" datatype="html">
+        <source>Kullanıcı Sayısı</source>
+        <target>Kullanıcı Sayısı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b6ea82ec4b2fa2f5c34c4d9ff22c43540451e42f" datatype="html">
+        <source>Başlangıç Yıl-Hafta</source>
+        <target>Başlangıç Yıl-Hafta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cd929388faee3ca6c4ce1064deceb247f736f8ed" datatype="html">
+        <source>Bitiş Yıl-Hafta</source>
+        <target>Bitiş Yıl-Hafta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3b4287e6af6f078c0501eef9e929eb9f26512e89" datatype="html">
+        <source>YETKİSİZ GİRİŞ</source>
+        <target>YETKİSİZ GİRİŞ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/unauthorized.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a90d6a80fe5ff7e4a43f1e8bb23f4b0fee4547a5" datatype="html">
+        <source>
+                Bu ekran için giriş yetkiniz bulunmamaktadır.
+            </source>
+        <target>**PARTIAL**          
+          Bu ekran için giriş yetkiniz bulunmamaktadır.          
+        **PARTIAL**</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/unauthorized.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ce3195f72e59d4154520bcd21735ebaef695b0b9" datatype="html">
+        <source>SAYFA BULUNAMADI</source>
+        <target>SAYFA BULUNAMADI</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/page-not-found.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d2d07c00a0b38727243d32e0893066c329b35b59" datatype="html">
+        <source>
+                Üzgünüz:( Bizde olmayan bir sayfaya giriş yapmaya çalıştınız.
+            </source>
+        <target>**PARTIAL**
+          Üzgünüz:( Bizde olmayan bir sayfaya giriş yapmaya çalıştınız.
+        **PARTIAL**</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/page-not-found.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fa13966caf12f04e64fe7347ffb0627feeca0f57" datatype="html">
+        <source>HATA OLUŞTU</source>
+        <target>HATA OLUŞTU</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/error.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d3e51547d7dbed7507012b546352449b8b968a88" datatype="html">
+        <source>
+                Oopps:( Tahmin edemediğimiz bir hata oluştu. En kısa sürede düzelteceğiz.
+            </source>
+        <target>
+                Oopps:( Tahmin edemediğimiz bir hata oluştu. En kısa sürede düzelteceğiz.
+          </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/ui/error.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="698802b81832fee0c5c79c8abd721c4de338d7b9" datatype="html">
+        <source>Bilgilendirme</source>
+        <target>Bilgilendirme</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="92f7f1110fafe05149d30775f2e92920a5c3b283" datatype="html">
+        <source>Kayıt başarıyla gerçekleşti</source>
+        <target>Kayıt başarıyla gerçekleşti</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="415f8ff8f3efef38a124f0265db49bb00614080c" datatype="html">
+        <source>Bir hata oluştu.</source>
+        <target>Bir hata oluştu.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
+        <source>Settings</source>
+        <target>Ayarlar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="49709d5380ebd7c2484aa79b5ef301bc6f1fefad" datatype="html">
+        <source>Server:</source>
+        <target>Sunucu:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d1abcfb2bc22e1415ea6334ab3310ce5e9df50b1" datatype="html">
+        <source>Database:</source>
+        <target>Veritabanı:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8937487770d2c44b382d728a6e69e0bb534b21e" datatype="html">
+        <source>Table:</source>
+        <target>Tablo:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c5e784382d389a262322d10e7f6ea4179fa6fec0" datatype="html">
+        <source>Column:</source>
+        <target>Kolon:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3bb351ea6c98d11eb111708c2d620a3e79029ee6" datatype="html">
+        <source>Language:</source>
+        <target>Dil:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ef1b684f545ae121691f5e93118504413f50b23f" datatype="html">
+        <source>
+                    Load
+                </source>
+        <target>
+                    Yükle
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/selection.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56042a2cc7aaa43e90b298f375ffd91bbcf0d731" datatype="html">
+        <source>Hata oluştu!</source>
+        <target>Hata oluştu!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8b029bd3c9cc9021c5892f0b691e43617e3ac04" datatype="html">
+        <source>Localization Data</source>
+        <target>Localization Data</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="24f68363f7c0cedb9509271880d06f08ac98830e" datatype="html">
+        <source>Lokalizasyon Listesi</source>
+        <target>Lokalizasyon Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeTable.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba5c4897db3d44ea37761589ba8c9f0b90faddcf" datatype="html">
+        <source>
+                            Save
+                        </source>
+        <target>
+                            Save
+                        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/dataLocalizer/localizeRow.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aff296b34425b90636545d476a5710c483840096" datatype="html">
+        <source>Export </source>
+        <target />
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/common/lcw-export-button.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c36a66f2107e8da5371ebc9d15c2008dff567f46" datatype="html">
+        <source>Role</source>
+        <target>Rol</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="11e2ac1ed34888b8e2a3c6f55f6aa6a8d4c0c84e" datatype="html">
+        <source>İçeren</source>
+        <target>İçeren</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e505bdd51fe372ed04125391f6fd13c544356b57" datatype="html">
+        <source>Başlayan</source>
+        <target>Başlayan</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9ac34516c48c7d193a4dc5e30fd59f9b0e73ca7d" datatype="html">
+        <source> Rol Ref :</source>
+        <target> Rol Ref :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9bee4125b3855ce2b5afda0105e7cb090a34c9dc" datatype="html">
+        <source> Rol Adı:</source>
+        <target> Rol Adı:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c303baf4c7ec8bcae8c0d540e028681eb883dac3" datatype="html">
+        <source>Rol adı girmeniz bekleniyor</source>
+        <target>Rol adı gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f76760c930f38eb835b6c86378216d4a3a70e496" datatype="html">
+        <source>Açiklama girmeniz gerekiyor</source>
+        <target>Açiklama gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b4e1eb900d87e1f24090d33814a57f711fa21fc5" datatype="html">
+        <source>Durum :</source>
+        <target>Durum :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ddb24af2cbb95b0c8efdb55c3ee637e8f2f1b7d3" datatype="html">
+        <source>Kaydet</source>
+        <target>Kaydet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
+        <source>Name</source>
+        <target>Ad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3b63e0028ca65ff108d21111d222e6da43ff4b84" datatype="html">
+        <source>Explanation</source>
+        <target>Açıklama</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c504cdfd5e526e6b38dbf4ed693ea9635bf73551" datatype="html">
+        <source>Member State</source>
+        <target>Üyelik Durumu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="14e36645f8182ef8e6ddc168ec77c1a4c979ca59" datatype="html">
+        <source>Valid From</source>
+        <target>Geçrelilik Başlangıç</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f7da459b7d2fe25e71d93ae2ed45c00111b8efcf" datatype="html">
+        <source>Valid To</source>
+        <target>Geçrelilik Bitiş</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="472f2890e75d2f37dbe1da8bb859594b5e22a933" datatype="html">
+        <source>Created Date</source>
+        <target>Oluşturma Tariji</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="99d563bc8c3d932bff69f456e7507af71e48863b" datatype="html">
+        <source>Created User</source>
+        <target>Oluşturan Kullanıcı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60267cb8d6235fc5e3aeb2f39de85680e06c4173" datatype="html">
+        <source>Modified Date</source>
+        <target>Değiştirme Tarihi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ec37bb701791f7b51cd4b6f7a29cc81faed4eb02" datatype="html">
+        <source>Modified User</source>
+        <target>Değiştiren Kullanıcı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3ab6e171bb73977be94ecdfe451ae921467099cb" datatype="html">
+        <source>Claim in Rolleri</source>
+        <target>Claim in Rolleri</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim-role.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ede22b36947c968122aa653973c559949e21a7cf" datatype="html">
+        <source>ClaimRef:</source>
+        <target>ClaimRef:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="616e206cb4f25bd5885fc35925365e43cf5fb929" datatype="html">
+        <source>Name:</source>
+        <target>Ad:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a5a1bb55e7723c86533c20d09abf7b6020a04404" datatype="html">
+        <source>ClaimName is required</source>
+        <target>Claim adı gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4a22c6843133f0b0d7dc0d28f864f2f90c1de7ad" datatype="html">
+        <source>Description:</source>
+        <target>Açıklama:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d57718edc7045efe96ab976ebd7594c8aadef801" datatype="html">
+        <source>Description is required</source>
+        <target>Açıklama gerekli</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="caeaea23981b9730ff04e00174619919105e94a5" datatype="html">
+        <source>State:</source>
+        <target>Durum:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
+        <source>Save</source>
+        <target>Kaydet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d81f00c85d3b507f3e3d78bfc617a2c66e028391" datatype="html">
+        <source>New</source>
+        <target>Yeni</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3574b96e4970a4b9d98806c8c7100c60ea37069c" datatype="html">
+        <source>Security</source>
+        <target>Güvenlik</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5ffb3dac6bcfe67bdcf942c58ca42122a7e4bea7" datatype="html">
+        <source>ClaimRef</source>
+        <target>ClaimRef</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eec715de352a6b114713b30b640d319fa78207a0" datatype="html">
+        <source>Description</source>
+        <target>Açıklama</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6cb7275e59fa87fefa1e1792ad903c24d512091e" datatype="html">
+        <source>EntityStateName</source>
+        <target>EntityStateName</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9058a04a57ed4b7565ab1982cb8042375a0d86f6" datatype="html">
+        <source>×</source>
+        <target>x</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="59becb003553a2ba309a76e0283ff658f77f8d9c" datatype="html">
+        <source>User List</source>
+        <target>Kullanıcı Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e4ee3bd5070007ab0a8572861318b5ad3971a652" datatype="html">
+        <source>User Group List</source>
+        <target>Kullanıcı Grubu Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5960db02a77d237a77a38e83988932ad1819e4a4" datatype="html">
+        <source>Role List</source>
+        <target>Rol Listesi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4e529ae5ffd73001d1ff4bbdeeb0a72e342e5c8" datatype="html">
+        <source>Close</source>
+        <target>Kapat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/claim/claim.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>      
+       <trans-unit id="5f38c96bf00cf624c759592e2d02e5ab0cb0358e" datatype="html">
+        <source>TOPLAM</source>
+        <target>TOPLAM</target>       
+        <context-group purpose="location">
+          <context context-type="sourcefile">C:/TFS2015/LCWFramework/ParsFramework/Util/Main/Pars.Util.Puma/Pars.Util.Puma.UI.Mvc/app/supplier/supplier-user-login-report.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>      
+    </body>
+  </file>
+</xliff>

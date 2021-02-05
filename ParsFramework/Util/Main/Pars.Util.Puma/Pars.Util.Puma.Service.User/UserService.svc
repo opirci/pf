@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Pars.Util.Puma.Service.User.UserService" CodeBehind="UserService.svc.cs" %>

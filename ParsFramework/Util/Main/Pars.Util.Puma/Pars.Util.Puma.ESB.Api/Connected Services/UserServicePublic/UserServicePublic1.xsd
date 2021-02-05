@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyRef" type="xs:int" />
+      <xs:element minOccurs="0" name="Domain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HRPersonelRef" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserBasicInfo" nillable="true" type="tns:UserBasicInfo" />
+  <xs:complexType name="ArrayOfUserSimpleDom">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserSimpleDom" nillable="true" type="tns:UserSimpleDom" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserSimpleDom" nillable="true" type="tns:ArrayOfUserSimpleDom" />
+  <xs:complexType name="UserSimpleDom">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserFullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserSimpleDom" nillable="true" type="tns:UserSimpleDom" />
+</xs:schema>

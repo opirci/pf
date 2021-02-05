@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" />
+  <xs:element name="GetMailTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q1:MailTemplateGetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="GetMailTemplateResult" nillable="true" type="q2:MailTemplateGetResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMailTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q3:MailTemplateInsertRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMailTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="InsertMailTemplateResult" nillable="true" type="q4:MailTemplateInsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q5:MailTemplateUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="UpdateMailTemplateResult" nillable="true" type="q6:MailTemplateUpdateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMailTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q7:MailTemplateDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMailTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="DeleteMailTemplateResult" nillable="true" type="q8:MailTemplateDeleteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q9:MailTemplateParameterGetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="GetMailTemplateParameterResult" nillable="true" type="q10:MailTemplateParameterGetResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMailTemplateParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q11:MailTemplateParameterInsertRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertMailTemplateParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="InsertMailTemplateParameterResult" nillable="true" type="q12:MailTemplateParameterInsertResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailTemplateParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q13:MailTemplateParameterUpdateRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateMailTemplateParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="UpdateMailTemplateParameterResult" nillable="true" type="q14:MailTemplateParameterUpdateResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMailTemplateParameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q15:MailTemplateParameterDeleteRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteMailTemplateParameterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="DeleteMailTemplateParameterResult" nillable="true" type="q16:MailTemplateParameterDeleteResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateWithValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q17:MailTemplateReplaceParametersWithValueRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateWithValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="GetMailTemplateWithValuesResult" nillable="true" type="q18:MailTemplateReplaceParametersWithValueResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameterRelations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q19:MailTemplateParameterRelationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameterRelationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="GetMailTemplateParameterRelationsResult" nillable="true" type="q20:MailTemplateParameterRelationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameterByFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="request" nillable="true" type="q21:MailTemplateParameterSearchRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMailTemplateParameterByFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" minOccurs="0" name="GetMailTemplateParameterByFilterResult" nillable="true" type="q22:MailTemplateParameterGetResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

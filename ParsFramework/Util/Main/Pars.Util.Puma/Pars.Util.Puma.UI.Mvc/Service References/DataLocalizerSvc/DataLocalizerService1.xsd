@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Pars.Util/Puma/Service/DataLocalizer/DataLocalizerService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DataLocalization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="columnName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="databaseName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="localeTable" nillable="true" type="tns:DataTable" />
+      <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataLocalization" nillable="true" type="tns:DataLocalization" />
+  <xs:complexType name="DataTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="columns" nillable="true" type="tns:ArrayOfColumn" />
+      <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="rows" nillable="true" type="tns:ArrayOfRow" />
+      <xs:element minOccurs="0" name="totalCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataTable" nillable="true" type="tns:DataTable" />
+  <xs:complexType name="ArrayOfColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Column" nillable="true" type="tns:Column" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumn" nillable="true" type="tns:ArrayOfColumn" />
+  <xs:complexType name="Column">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Column" nillable="true" type="tns:Column" />
+  <xs:complexType name="ArrayOfRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRow" nillable="true" type="tns:ArrayOfRow" />
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="isUpdated" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="values" nillable="true" type="q1:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Row" nillable="true" type="tns:Row" />
+</xs:schema>

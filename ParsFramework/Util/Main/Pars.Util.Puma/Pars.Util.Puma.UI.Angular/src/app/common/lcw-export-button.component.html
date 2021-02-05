@@ -1,0 +1,12 @@
+﻿<div class="btn-group">
+    <button i18n #btn [ngStyle]="exportButtonStyleInstance" [ngClass]="exportButtonClassInstance" (click)="exportTo()">Export </button>
+    <button class="dropdown-toggle" [ngStyle]="exportButtonStyleInstance" [ngClass]="exportButtonClassInstance" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li [ngStyle]="exportAsStyleInstance" [ngClass]="exportAsClassInstance(ExportFormat.ExcelXlsx)"><a (click)="setexportTo(ExportFormat.ExcelXlsx)">XLSX</a></li>
+        <li [ngStyle]="exportAsStyleInstance" [ngClass]="exportAsClassInstance(ExportFormat.ExcelCsvComma)"><a (click)="setexportTo(ExportFormat.ExcelCsvComma)">CSV (,)</a></li>
+        <li [ngStyle]="exportAsStyleInstance" [ngClass]="exportAsClassInstance(ExportFormat.ExcelCsvSemiColumn)"><a (click)="setexportTo(ExportFormat.ExcelCsvSemiColumn)">CSV (;)</a></li>
+    </ul>
+</div>

@@ -1,0 +1,5 @@
+﻿[{ "NspAddress":"nsp://umtestsvc:9000","ChannelName":"LCWSts\\Sub\\STSStaffAppointment_sub","SubscriberName":"PUMATest","PostApiAddress":"http://localhost/Pars.Util/Puma/ESBApi/api/esb/staffappointment"},
+{ "NspAddress":"nsp://umtestsvc:9000","ChannelName":"LCWSts\\Sub\\STSHarmonyResigningUser_sub","SubscriberName":"PUMATest","PostApiAddress":"http://localhost/Pars.Util/Puma/ESBApi/api/esb/resininguser"},
+{ "NspAddress":"nsp://umtestsvc:9000","ChannelName":"LCWSts\\Sub\\STSHarmonyUser_sub","SubscriberName":"PUMATest","PostApiAddress":"http://parsdevapp.lcwaikiki.local/Pars.Util/Puma/ESBApi/api/esb/createnewuser"},
+{ "NspAddress":"nsp://umtestsvc:9000","ChannelName":"LCWSts\\Sub\\STSHarmonyUserRecreate","SubscriberName":"PUMATest","PostApiAddress":"http://parsdevapp.lcwaikiki.local/Pars.Util/Puma/ESBApi/api/esb/recreateuser"},
+{ "NspAddress":"nsp://umtestsvc:9000","ChannelName":"LCWSts\\Sub\\STSHarmonyUserUpdate_sub","SubscriberName":"PUMATest","PostApiAddress":"http://http://localhost/Pars.Util/Puma/ESBApi/api/esb/updateuserinfo"}]

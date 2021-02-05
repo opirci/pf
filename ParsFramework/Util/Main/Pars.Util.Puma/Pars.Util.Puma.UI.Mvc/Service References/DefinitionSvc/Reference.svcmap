@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34f02e89-80ac-4256-b49a-487db7af6cf0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DefinitionService.xsd" MetadataType="Schema" ID="e43fe6fd-11b3-4726-b373-375d21a5a3f4" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DefinitionService.wsdl" MetadataType="Wsdl" ID="c9ef1606-7444-45b0-aa91-dc63c26996b0" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?wsdl" />
+    <MetadataFile FileName="DefinitionService1.xsd" MetadataType="Schema" ID="bfa4f2da-d02d-4f46-bbe3-d028b46be405" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DefinitionService2.xsd" MetadataType="Schema" ID="1673f3d6-9913-4261-afe7-c8d343075ecc" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DefinitionService.disco" MetadataType="Disco" ID="9282c18a-71ed-4f02-a981-fc09f8fd56b6" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?disco" />
+    <MetadataFile FileName="DefinitionService4.xsd" MetadataType="Schema" ID="4d18d0ba-c9a3-40f0-be0b-d8779e89edcb" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DefinitionService3.xsd" MetadataType="Schema" ID="591c71bc-a805-4a11-b589-9dcc39810e0a" SourceId="1" SourceUrl="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

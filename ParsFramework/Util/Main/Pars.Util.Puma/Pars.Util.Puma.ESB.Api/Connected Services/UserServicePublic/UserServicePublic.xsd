@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Response" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Service.Bussiness.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/PublicService/UserServicePublic.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Service" />
+  <xs:complexType name="SetUserClaimResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q1:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserClaimResponse" nillable="true" type="tns:SetUserClaimResponse" />
+  <xs:complexType name="SetUserGroupClaimResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q2:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserGroupClaimResponse" nillable="true" type="tns:SetUserGroupClaimResponse" />
+  <xs:complexType name="SetRoleClaimResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q3:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetRoleClaimResponse" nillable="true" type="tns:SetRoleClaimResponse" />
+  <xs:complexType name="SetUserRoleResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q4:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserRoleResponse" nillable="true" type="tns:SetUserRoleResponse" />
+  <xs:complexType name="SetUserUserGroupResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q5:ResponseBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserUserGroupResponse" nillable="true" type="tns:SetUserUserGroupResponse" />
+</xs:schema>

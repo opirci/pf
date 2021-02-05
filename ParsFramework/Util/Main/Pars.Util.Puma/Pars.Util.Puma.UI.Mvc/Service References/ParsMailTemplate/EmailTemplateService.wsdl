@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmailTemplateService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WS2007FederationHttpBinding_IEmailTemplateService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+              <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wsfed</Address>
+                <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+                  <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <wsx:MetadataSection xmlns="">
+                      <wsx:MetadataReference>
+                        <Address xmlns="http://www.w3.org/2005/08/addressing">https://stsdev.lcwaikiki.com/sts/issue/wstrust/mex</Address>
+                      </wsx:MetadataReference>
+                    </wsx:MetadataSection>
+                  </Metadata>
+                </Metadata>
+              </Issuer>
+              <sp:RequestSecurityTokenTemplate>
+                <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/Bearer</trust:KeyType>
+                <trust:CanonicalizationAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/10/xml-exc-c14n#</trust:CanonicalizationAlgorithm>
+                <trust:EncryptionAlgorithm xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://www.w3.org/2001/04/xmlenc#aes256-cbc</trust:EncryptionAlgorithm>
+              </sp:RequestSecurityTokenTemplate>
+              <wsp:Policy>
+                <sp:RequireInternalReference />
+              </wsp:Policy>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy />
+        </sp:Wss11>
+        <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:MustSupportIssuedTokens />
+            <sp:RequireClientEntropy />
+            <sp:RequireServerEntropy />
+          </wsp:Policy>
+        </sp:Trust13>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" />
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Service" />
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Data" />
+      <xsd:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_InsertMailTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMailTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_InsertMailTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMailTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_UpdateMailTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_UpdateMailTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_DeleteMailTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMailTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_DeleteMailTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMailTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameter" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_InsertMailTemplateParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMailTemplateParameter" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_InsertMailTemplateParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMailTemplateParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_UpdateMailTemplateParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailTemplateParameter" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_UpdateMailTemplateParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMailTemplateParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_DeleteMailTemplateParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMailTemplateParameter" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_DeleteMailTemplateParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMailTemplateParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateWithValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateWithValues" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateWithValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateWithValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameterRelations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameterRelations" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameterRelations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameterRelationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameterByFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameterByFilter" />
+  </wsdl:message>
+  <wsdl:message name="IEmailTemplateService_GetMailTemplateParameterByFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMailTemplateParameterByFilterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEmailTemplateService">
+    <wsdl:operation name="GetMailTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplate" message="tns:IEmailTemplateService_GetMailTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateResponse" message="tns:IEmailTemplateService_GetMailTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/InsertMailTemplate" message="tns:IEmailTemplateService_InsertMailTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/InsertMailTemplateResponse" message="tns:IEmailTemplateService_InsertMailTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/UpdateMailTemplate" message="tns:IEmailTemplateService_UpdateMailTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/UpdateMailTemplateResponse" message="tns:IEmailTemplateService_UpdateMailTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMailTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/DeleteMailTemplate" message="tns:IEmailTemplateService_DeleteMailTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/DeleteMailTemplateResponse" message="tns:IEmailTemplateService_DeleteMailTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameter" message="tns:IEmailTemplateService_GetMailTemplateParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterResponse" message="tns:IEmailTemplateService_GetMailTemplateParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailTemplateParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/InsertMailTemplateParameter" message="tns:IEmailTemplateService_InsertMailTemplateParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/InsertMailTemplateParameterResponse" message="tns:IEmailTemplateService_InsertMailTemplateParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailTemplateParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/UpdateMailTemplateParameter" message="tns:IEmailTemplateService_UpdateMailTemplateParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/UpdateMailTemplateParameterResponse" message="tns:IEmailTemplateService_UpdateMailTemplateParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMailTemplateParameter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/DeleteMailTemplateParameter" message="tns:IEmailTemplateService_DeleteMailTemplateParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/DeleteMailTemplateParameterResponse" message="tns:IEmailTemplateService_DeleteMailTemplateParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateWithValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateWithValues" message="tns:IEmailTemplateService_GetMailTemplateWithValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateWithValuesResponse" message="tns:IEmailTemplateService_GetMailTemplateWithValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameterRelations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterRelations" message="tns:IEmailTemplateService_GetMailTemplateParameterRelations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterRelationsResponse" message="tns:IEmailTemplateService_GetMailTemplateParameterRelations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameterByFilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterByFilter" message="tns:IEmailTemplateService_GetMailTemplateParameterByFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterByFilterResponse" message="tns:IEmailTemplateService_GetMailTemplateParameterByFilter_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS2007FederationHttpBinding_IEmailTemplateService" type="tns:IEmailTemplateService">
+    <wsp:PolicyReference URI="#WS2007FederationHttpBinding_IEmailTemplateService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMailTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/GetMailTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/InsertMailTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/UpdateMailTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMailTemplate">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/DeleteMailTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameter">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMailTemplateParameter">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/InsertMailTemplateParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMailTemplateParameter">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/UpdateMailTemplateParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMailTemplateParameter">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/DeleteMailTemplateParameter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateWithValues">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/GetMailTemplateWithValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameterRelations">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterRelations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMailTemplateParameterByFilter">
+      <soap12:operation soapAction="http://tempuri.org/IEmailTemplateService/GetMailTemplateParameterByFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmailTemplateService">
+    <wsdl:port name="WS2007FederationHttpBinding_IEmailTemplateService" binding="tns:WS2007FederationHttpBinding_IEmailTemplateService">
+      <soap12:address location="https://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

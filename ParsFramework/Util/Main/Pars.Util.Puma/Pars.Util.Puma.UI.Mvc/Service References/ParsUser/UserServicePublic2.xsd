@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Management.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://parsdevapp.lcwaikiki.local/Pars.Util/Management/Service/UserServicePublic.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfUserBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserBase" nillable="true" type="tns:UserBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserBase" nillable="true" type="tns:ArrayOfUserBase" />
+  <xs:complexType name="UserBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SurName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserRef" type="xs:int" />
+      <xs:element minOccurs="0" name="UserUid" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserBase" nillable="true" type="tns:UserBase" />
+</xs:schema>

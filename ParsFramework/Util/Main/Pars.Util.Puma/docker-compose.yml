@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  pars.util.puma.api.definition:
+    image: pars.util.puma.api.definition
+    build:
+      context: .\Pars.Util.Puma.Api.Definition
+      dockerfile: Dockerfile
+
+  pars.util.puma.api.datalocalizer:
+    image: pars.util.puma.api.datalocalizer
+    build:
+      context: .\Pars.Util.Puma.Api.DataLocalizer
+      dockerfile: Dockerfile
+
+  pars.util.puma.api.authmanagement:
+    image: pars.util.puma.api.authmanagement
+    build:
+      context: .\Pars.Util.Puma.Api.AuthManagement
+      dockerfile: Dockerfile

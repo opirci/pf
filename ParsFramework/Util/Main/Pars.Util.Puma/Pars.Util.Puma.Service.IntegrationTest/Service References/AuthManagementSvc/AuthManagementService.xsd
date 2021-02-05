@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfClaim">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Claim" nillable="true" type="tns:Claim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaim" nillable="true" type="tns:ArrayOfClaim" />
+  <xs:complexType name="Claim">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DomainBaseOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaimRef" type="xs:int" />
+          <xs:element minOccurs="0" name="EntityState" nillable="true" type="tns:EntityState" />
+          <xs:element minOccurs="0" name="LocaleData" nillable="true" type="tns:LocaleData" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Claim" nillable="true" type="tns:Claim" />
+  <xs:complexType name="DomainBaseOfint">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="DomainBaseOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="int" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasChanged" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DomainBaseOfint" nillable="true" type="tns:DomainBaseOfint" />
+  <xs:complexType name="EntityState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityStateRef" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityState" nillable="true" type="tns:EntityState" />
+  <xs:complexType name="LocaleData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DomainBaseOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LocaleRef" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LocaleData" nillable="true" type="tns:LocaleData" />
+  <xs:complexType name="ArrayOfUserGroupRelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserGroupRelation" nillable="true" type="tns:UserGroupRelation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserGroupRelation" nillable="true" type="tns:ArrayOfUserGroupRelation" />
+  <xs:complexType name="UserGroupRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DomainBaseOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberState" nillable="true" type="tns:MemberState" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="UserGroupRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ValidTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserGroupRelation" nillable="true" type="tns:UserGroupRelation" />
+  <xs:complexType name="MemberState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MemberStateRef" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MemberState" nillable="true" type="tns:MemberState" />
+  <xs:complexType name="ArrayOfRoleRelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RoleRelation" nillable="true" type="tns:RoleRelation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoleRelation" nillable="true" type="tns:ArrayOfRoleRelation" />
+  <xs:complexType name="RoleRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Role">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RelatedRef" type="xs:int" />
+          <xs:element minOccurs="0" name="memberState" nillable="true" type="tns:MemberState" />
+          <xs:element minOccurs="0" name="relationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="validFrom" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="validTo" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RoleRelation" nillable="true" type="tns:RoleRelation" />
+  <xs:complexType name="Role">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DomainBaseOfint">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createdDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="createdUserRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="entityState" nillable="true" type="tns:EntityState" />
+          <xs:element minOccurs="0" name="localeData" nillable="true" type="tns:LocaleData" />
+          <xs:element minOccurs="0" name="modifiedDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="modifiedUserRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="roleRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="ArrayOfLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Lookup" nillable="true" type="tns:Lookup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookup" nillable="true" type="tns:ArrayOfLookup" />
+  <xs:complexType name="Lookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ref" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Lookup" nillable="true" type="tns:Lookup" />
+</xs:schema>

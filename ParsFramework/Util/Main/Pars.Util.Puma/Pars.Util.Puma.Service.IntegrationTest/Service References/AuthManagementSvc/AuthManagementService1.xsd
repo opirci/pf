@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.AuthManagement" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.AuthManagement" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" />
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/AuthManagement/AuthManagementService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" />
+  <xs:complexType name="ClaimListRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimListRequest" nillable="true" type="tns:ClaimListRequest" />
+  <xs:complexType name="ClaimListResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="Claims" nillable="true" type="q1:ArrayOfClaim" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimListResponse" nillable="true" type="tns:ClaimListResponse" />
+  <xs:complexType name="UserGroupRelationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimRef" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserGroupRelationRequest" nillable="true" type="tns:UserGroupRelationRequest" />
+  <xs:complexType name="UserGroupRelationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="UserGroups" nillable="true" type="q2:ArrayOfUserGroupRelation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserGroupRelationResponse" nillable="true" type="tns:UserGroupRelationResponse" />
+  <xs:complexType name="ClaimSaveRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="Claim" nillable="true" type="q3:Claim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimSaveRequest" nillable="true" type="tns:ClaimSaveRequest" />
+  <xs:complexType name="ClaimSaveResponse">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="Claim" nillable="true" type="q4:Claim" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimSaveResponse" nillable="true" type="tns:ClaimSaveResponse" />
+  <xs:complexType name="GetRolesByClaimRefRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q5:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+          <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="value" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRolesByClaimRefRequest" nillable="true" type="tns:GetRolesByClaimRefRequest" />
+  <xs:complexType name="GetRolesByClaimRefResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q6:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" type="xs:int" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="values" nillable="true" type="q7:ArrayOfRoleRelation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRolesByClaimRefResponse" nillable="true" type="tns:GetRolesByClaimRefResponse" />
+  <xs:complexType name="SaveRoleRelationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q8:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="RoleRelation" nillable="true" type="q9:RoleRelation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveRoleRelationRequest" nillable="true" type="tns:SaveRoleRelationRequest" />
+  <xs:complexType name="SaveRoleRelationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q10:ResponseBase">
+        <xs:sequence>
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Domain" minOccurs="0" name="Value" nillable="true" type="q11:RoleRelation" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SaveRoleRelationResponse" nillable="true" type="tns:SaveRoleRelationResponse" />
+  <xs:complexType name="GetRolesByStartingNameRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" base="q12:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="searchText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRolesByStartingNameRequest" nillable="true" type="tns:GetRolesByStartingNameRequest" />
+  <xs:complexType name="GetRolesByContainingNameRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:GetRolesByStartingNameRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRolesByContainingNameRequest" nillable="true" type="tns:GetRolesByContainingNameRequest" />
+</xs:schema>

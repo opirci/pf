@@ -1,0 +1,88 @@
+﻿
+<msg-text i18n-value #msgSuccessHeader value="Bilgilendirme"></msg-text>
+<msg-text i18n-value #msgSuccessContent value="Kayıt başarıyla gerçekleşti"></msg-text>
+<msg-text i18n-value #msgErroHeader value="Hata"></msg-text>
+<msg-text i18n-value #msgErrorContent value="Bir hata oluştu."></msg-text>
+
+
+<div class="panel panel-default" style="width: 340px;">
+    <div i18n class="panel-heading text-bold">Settings</div>
+    <div class="panel-body">
+        <div class="form-group" style="width: 300px; margin: 0px;">
+            <div style="margin-bottom: 10px;">
+                <label i18n>Server:</label><spinner [enabled]="isReadingServers"></spinner>
+                <select [(ngModel)]="selectedServer" class="form-control" name="servers" id="servers" #server (change)="getDatabases($event.target.value)">
+                    <option value="-1">-Seçiniz-</option>
+                    <option *ngFor="let server of servers" [value]="server.Ref">
+                        {{server.Name}}
+                    </option>
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label i18n>Database:</label> <spinner [enabled]="isReadingDatabases"></spinner>
+                <select [(ngModel)]="selectedDatabase" class="form-control" name="databases" id="databases" #database (change)="getTables($event.target.value)">
+                    <option value="-1">-Seçiniz-</option>
+                    <option *ngFor="let database of databases" [value]="database.Ref">
+                        {{database.Name}}
+                    </option>
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label i18n>Table:</label><spinner [enabled]="isReadingTables"></spinner>
+                <select [(ngModel)]="selectedTable" class="form-control" name="tables" id="tables" #table (change)="getColumns($event.target.value)">
+                    <option value="-1">-Seçiniz-</option>
+                    <option *ngFor="let table of tables" [value]="table.Ref">
+                        {{table.Name}}
+                    </option>
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label i18n>Column:</label><spinner [enabled]="isReadingColumns"></spinner>
+                <select [(ngModel)]="selectedColumn" class="form-control" name="columns" id="columns" #column>
+                    <option value="-1">-Seçiniz-</option>
+                    <option *ngFor="let column of columns" [value]="column.Ref">
+                        {{column.Name}}
+                    </option>
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label i18n>Language:</label><spinner [enabled]="isReadingLanguages"></spinner>
+                <select class="form-control select2" multiple="multiple" name="languages" id="languages" #language data-placeholder="Select a Language">
+                    <option *ngFor="let language of languages" [value]="language.Ref">
+                        {{language.Name}}
+                    </option>
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <button i18n class="btn btn-success" name="submit" [disabled]="column.selectedOptions[0]?.index == 0 || language.selectedOptions.length < 1"
+                        type="submit" style="width: 100%;" (click)="select(server, database, table, column, language, null);">
+                    Load
+                </button>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <button i18n class="btn btn-success" [disabled]="!canSave" name="save" (click)="save(server, database, table, column)" style="width: 100%;">
+                    Save
+                </button>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <!--<button i18n class="btn btn-success" name="import" [disabled]="column.options.length < 2" (click)="import()" style="width: 100%;">
+                    Import
+                </button>-->
+                <input class="btn btn-success" type="file" (change)="import($event, server, database, table, column, language)" accept=".xls,.xlsx"
+                       [disabled]="column.selectedOptions[0]?.index == 0 || language.selectedOptions.length < 1" style="width: 100%;" />
+            </div>
+
+            <ng-content select="section"></ng-content>
+
+
+            <!--<input type="button" [popover]="fooPopup" value="Click me!" />
+            <input type="button" [popover]="fooPopup" (click)="popup();" />-->
+            <!--<div style="margin-bottom: 10px;">
+                <button i18n class="btn btn-success" [disabled]="!canExport" name="export" (click)="export()" style="width: 100%;">
+                    Export
+                </button>
+            </div>-->
+            <simple-notifications [options]="notifyOptions"></simple-notifications>
+        </div>
+    </div>
+</div>

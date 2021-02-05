@@ -1,0 +1,133 @@
+﻿<div style="height: 800px;">
+    <form #form="ngForm" novalidate class="form-inline" style="margin-left: 15px;">
+        <div class="form-group" style="display: none;">
+            <label i18n>ClaimRef:</label>
+            <label>{{ selectedClaim.ClaimRef }}</label>
+        </div>
+        <div class="form-group">
+            <label i18n>Name:</label>
+            <input class="form-control" required [(ngModel)]="selectedClaim.Name"  i18n-placeholder placeholder="ClaimName is required" name="name" id="name" #name />
+        </div>
+        <div class="form-group">
+            <label i18n>Description:</label>
+            <input class="form-control" required [(ngModel)]="selectedClaim.LocaleData.Value" i18n-placeholder placeholder="Description is required" #desc name="description" id="description" />
+        </div>
+        <div class="form-group">
+            <label i18n>State:</label>
+            <select class="form-control" name="entityState" (change)="selectedEntityChanged($event.target.value);"
+                    [ngModel]="selectedClaim.EntityState.Description">
+                <option *ngFor="let ent of entityStates">
+                    {{ent.Description}}
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button i18n type="submit" class="btn btn-success" (click)="save();" [disabled]="form.invalid">Save</button>
+            <button i18n class="btn btn-info" (click)="newClaim();">New</button>
+            <button i18n type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal" [disabled]="selectedClaim.ClaimRef == 0">Security</button>
+        </div>
+        <language-changer></language-changer>
+</form>
+    <br />
+    <simple-notifications [options]="notifyOptions"></simple-notifications>
+    <!--<my-date-picker [options]="myDatePickerInlineOptions" (dateChanged)="onDateChanged($event)" [locale]="locale"></my-date-picker>-->
+
+    <div class="panel-body">
+        <!--<div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Claim List</h3>
+                <div class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" id="table_search" (keypress)="$event.keyCode == 13 ? paging.addSearchParameter(table_search.value) : null"  #table_search class="form-control pull-right" placeholder="Search"/>
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default" (click)="paging.addSearchParameter(table_search.value);">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p *ngIf="!claims">
+                    <em>Loading...</em>
+                </p>
+                <table *ngIf="claims" class="table table-striped table-hover table-condensed table-bordered">
+                    <thead>
+                    <tr>
+                        <th>ClaimRef</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>EntityStateName</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let cl of claims">
+                        <td>{{ cl.ClaimRef }}</td>
+                        <td>{{ cl.Name }}</td>
+                        <td>{{ cl.LocaleData.Value }}</td>
+                        <td>{{ cl.EntityState.Description }}</td>
+                        <td style="width: 20px;" align="center">
+                            <a class="btn btn-primary btn-sm" (click)="select(cl);">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <paging [url]="url" [jsonDataName]="jsonDataName" (pageFunc)="getDataFromPaging($event)" #paging></paging>-->
+
+        <!--<grid [url]="url" [jsonDataName]="jsonDataName" [columnList]="columnList" [gridTitle]="gridTitle" selectText="Güncelle" (pageFunc)="getDataFromPaging($event)" (selectFunc)="selectFromGrid($event)" #paging>Loading...</grid>-->
+        <grid [url]="url" [jsonDataName]="jsonDataName" enablePaging="true" enableSelectColumn="true" [gridTitle]="gridTitle" 
+              (pageFunc)="getDataFromPaging($event)" (selectFunc)="selectFromGrid($event)"  #paging>
+            <column  i18n-headerName headerName="ClaimRef" fieldName="ClaimRef" allowSorting="true"></column>
+            <column  i18n-headerName headerName="Name" fieldName="Name" allowSorting="true"></column>
+            <column  i18n-headerName headerName="Description" fieldName="LocaleData.Value" allowSorting="true"></column>
+            <column  i18n-headerName headerName="EntityStateName" fieldName="EntityState.Description"></column>
+        </grid>
+
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="width: 1200px;">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button i18n type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a i18n data-toggle="tab" href="#tabUserList">User List</a></li>
+                        <li><a i18n data-toggle="tab" href="#tabUserGroupList">User Group List</a></li>
+                        <li><a i18n data-toggle="tab" href="#tabRoleList">Role List</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="tabUserList" class="tab-pane fade in active">
+                            <h3 i18n>User List</h3>
+                            <claim-user></claim-user>
+                        </div>
+                        <div id="tabUserGroupList" class="tab-pane fade">
+                            <h3 i18n>User Group List</h3>
+                            <claim-usergroup></claim-usergroup>
+                        </div>
+                        <div id="tabRoleList" class="tab-pane fade">
+                            <h3 i18n>Role List</h3>
+                            <claim-role [claimRef]="selectedClaim.ClaimRef"></claim-role>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button i18n type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

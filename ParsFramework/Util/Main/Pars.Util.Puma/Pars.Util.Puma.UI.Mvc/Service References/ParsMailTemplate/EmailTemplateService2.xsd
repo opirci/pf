@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Common.EmailTemplateService.Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Service" />
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Data" />
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailTemplateManagement/Service/EmailTemplateService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="MailTemplateGetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="LanguageRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailTemplateKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateGetRequest" nillable="true" type="tns:MailTemplateGetRequest" />
+  <xs:complexType name="MailTemplateGetResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q2:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplateList" nillable="true" type="tns:ArrayOfMailTemplateDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateGetResponse" nillable="true" type="tns:MailTemplateGetResponse" />
+  <xs:complexType name="ArrayOfMailTemplateDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailTemplateDC" nillable="true" type="tns:MailTemplateDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailTemplateDC" nillable="true" type="tns:ArrayOfMailTemplateDC" />
+  <xs:complexType name="MailTemplateDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q3:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailTemplateKey" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailFrom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailFromName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailTemplateApplicationMap" nillable="true" type="tns:ArrayOfMailTemplateApplicationMapDC" />
+          <xs:element minOccurs="0" name="MailTemplateParameterRelation" nillable="true" type="tns:ArrayOfMailTemplateParameterRelationDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateDC" nillable="true" type="tns:MailTemplateDC" />
+  <xs:complexType name="ArrayOfMailTemplateApplicationMapDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailTemplateApplicationMapDC" nillable="true" type="tns:MailTemplateApplicationMapDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailTemplateApplicationMapDC" nillable="true" type="tns:ArrayOfMailTemplateApplicationMapDC" />
+  <xs:complexType name="MailTemplateApplicationMapDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q4:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateApplicationMapRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateApplicationMapDC" nillable="true" type="tns:MailTemplateApplicationMapDC" />
+  <xs:complexType name="ArrayOfMailTemplateParameterRelationDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailTemplateParameterRelationDC" nillable="true" type="tns:MailTemplateParameterRelationDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailTemplateParameterRelationDC" nillable="true" type="tns:ArrayOfMailTemplateParameterRelationDC" />
+  <xs:complexType name="MailTemplateParameterRelationDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q5:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ParameterName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParameterValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MailTemplateParameterRelationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ParameterRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ForcedUse" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterRelationDC" nillable="true" type="tns:MailTemplateParameterRelationDC" />
+  <xs:complexType name="MailTemplateParameterDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q6:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ParameterRef" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailTemplateParameterApplicationMap" nillable="true" type="tns:ArrayOfMailTemplateParameterApplicationMapDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterDC" nillable="true" type="tns:MailTemplateParameterDC" />
+  <xs:complexType name="ArrayOfMailTemplateParameterApplicationMapDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailTemplateParameterApplicationMapDC" nillable="true" type="tns:MailTemplateParameterApplicationMapDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailTemplateParameterApplicationMapDC" nillable="true" type="tns:ArrayOfMailTemplateParameterApplicationMapDC" />
+  <xs:complexType name="MailTemplateParameterApplicationMapDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q7:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateParameterApplicationMapRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ParameterRef" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterApplicationMapDC" nillable="true" type="tns:MailTemplateParameterApplicationMapDC" />
+  <xs:complexType name="MailTemplateInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q8:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateInsertRequest" nillable="true" type="tns:MailTemplateInsertRequest" />
+  <xs:complexType name="MailTemplateInsertResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q9:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateInsertResponse" nillable="true" type="tns:MailTemplateInsertResponse" />
+  <xs:complexType name="MailTemplateUpdateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q10:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateUpdateRequest" nillable="true" type="tns:MailTemplateUpdateRequest" />
+  <xs:complexType name="MailTemplateUpdateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q11:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateUpdateResponse" nillable="true" type="tns:MailTemplateUpdateResponse" />
+  <xs:complexType name="MailTemplateDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q12:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateDeleteRequest" nillable="true" type="tns:MailTemplateDeleteRequest" />
+  <xs:complexType name="MailTemplateDeleteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q13:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateDeleteResponse" nillable="true" type="tns:MailTemplateDeleteResponse" />
+  <xs:complexType name="MailTemplateParameterGetRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q14:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ParameterRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterGetRequest" nillable="true" type="tns:MailTemplateParameterGetRequest" />
+  <xs:complexType name="MailTemplateParameterGetResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q15:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplateParameterList" nillable="true" type="tns:ArrayOfMailTemplateParameterDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterGetResponse" nillable="true" type="tns:MailTemplateParameterGetResponse" />
+  <xs:complexType name="ArrayOfMailTemplateParameterDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailTemplateParameterDC" nillable="true" type="tns:MailTemplateParameterDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailTemplateParameterDC" nillable="true" type="tns:ArrayOfMailTemplateParameterDC" />
+  <xs:complexType name="MailTemplateParameterInsertRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q16:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterInsertRequest" nillable="true" type="tns:MailTemplateParameterInsertRequest" />
+  <xs:complexType name="MailTemplateParameterInsertResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q17:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterInsertResponse" nillable="true" type="tns:MailTemplateParameterInsertResponse" />
+  <xs:complexType name="MailTemplateParameterUpdateRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q18:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterUpdateRequest" nillable="true" type="tns:MailTemplateParameterUpdateRequest" />
+  <xs:complexType name="MailTemplateParameterUpdateResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q19:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterUpdateResponse" nillable="true" type="tns:MailTemplateParameterUpdateResponse" />
+  <xs:complexType name="MailTemplateParameterDeleteRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q20:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateParameter" nillable="true" type="tns:MailTemplateParameterDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterDeleteRequest" nillable="true" type="tns:MailTemplateParameterDeleteRequest" />
+  <xs:complexType name="MailTemplateParameterDeleteResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q21:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterDeleteResponse" nillable="true" type="tns:MailTemplateParameterDeleteResponse" />
+  <xs:complexType name="MailTemplateReplaceParametersWithValueRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q22:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailTemplateParameterList" nillable="true" type="tns:ArrayOfMailTemplateParameterRelationDC" />
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateReplaceParametersWithValueRequest" nillable="true" type="tns:MailTemplateReplaceParametersWithValueRequest" />
+  <xs:complexType name="MailTemplateReplaceParametersWithValueResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q23:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplate" nillable="true" type="tns:MailTemplateDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateReplaceParametersWithValueResponse" nillable="true" type="tns:MailTemplateReplaceParametersWithValueResponse" />
+  <xs:complexType name="MailTemplateParameterRelationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q24:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailTemplateRef" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterRelationRequest" nillable="true" type="tns:MailTemplateParameterRelationRequest" />
+  <xs:complexType name="MailTemplateParameterRelationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q25:ResponseBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MailTemplateParameterRelationList" nillable="true" type="tns:ArrayOfMailTemplateParameterRelationDC" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterRelationResponse" nillable="true" type="tns:MailTemplateParameterRelationResponse" />
+  <xs:complexType name="MailTemplateParameterSearchRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://schemas.datacontract.org/2004/07/Pars.Core.Service" base="q26:RequestBase">
+        <xs:sequence>
+          <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ApplicationRefList" nillable="true" type="q27:ArrayOfint" />
+          <xs:element minOccurs="0" name="ParameterKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailTemplateParameterSearchRequest" nillable="true" type="tns:MailTemplateParameterSearchRequest" />
+</xs:schema>

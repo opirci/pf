@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Pars.Common.EmailService.Shared" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Pars.Common.EmailService.Shared" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailService/Service/EmailService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://parsdevapp.lcwaikiki.local/Pars.Common/EmailService/Service/EmailService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Pars.Core.Data" />
+  <xs:complexType name="MailSendRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="tns:MailQueueDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MailSendRequest" nillable="true" type="tns:MailSendRequest" />
+  <xs:complexType name="MailQueueDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q1:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailQueueRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ApplicationRef" type="xs:int" />
+          <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="To" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Bcc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastRetryDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Priority" type="xs:int" />
+          <xs:element minOccurs="0" name="RetryCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StatusRef" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailQueueAttachment" nillable="true" type="tns:ArrayOfMailQueueAttachmentDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailQueueDC" nillable="true" type="tns:MailQueueDC" />
+  <xs:complexType name="ArrayOfMailQueueAttachmentDC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MailQueueAttachmentDC" nillable="true" type="tns:MailQueueAttachmentDC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMailQueueAttachmentDC" nillable="true" type="tns:ArrayOfMailQueueAttachmentDC" />
+  <xs:complexType name="MailQueueAttachmentDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q2:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MailQueueAttachmentRef" type="xs:int" />
+          <xs:element minOccurs="0" name="MailQueueRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AttachmentRef" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailAttachment" nillable="true" type="tns:MailAttachmentDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailQueueAttachmentDC" nillable="true" type="tns:MailQueueAttachmentDC" />
+  <xs:complexType name="MailAttachmentDC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Core.Data" base="q3:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttachmentRef" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="RowVersion" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="CreatedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModifiedUserRef" type="xs:int" />
+          <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SessionRef" nillable="true" type="ser:guid" />
+          <xs:element minOccurs="0" name="MailQueueAttachment" nillable="true" type="tns:ArrayOfMailQueueAttachmentDC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MailAttachmentDC" nillable="true" type="tns:MailAttachmentDC" />
+</xs:schema>

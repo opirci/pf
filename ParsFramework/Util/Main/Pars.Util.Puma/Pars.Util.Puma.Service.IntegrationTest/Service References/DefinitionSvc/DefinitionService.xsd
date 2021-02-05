@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" />
+  <xs:import schemaLocation="https://localhost/Pars.Util/Puma/Service/Definition/DefinitionService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" />
+  <xs:element name="GetEntityStates">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityStatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" minOccurs="0" name="GetEntityStatesResult" nillable="true" type="q1:GetEntityStatesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberStates">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMemberStatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service.Definition" minOccurs="0" name="GetMemberStatesResult" nillable="true" type="q2:MemberStateListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSegmentsAsLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSegmentsAsLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" minOccurs="0" name="GetSegmentsAsLookupResult" nillable="true" type="q3:LookupResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubSegmentsAsLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubSegmentsAsLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" minOccurs="0" name="GetSubSegmentsAsLookupResult" nillable="true" type="q4:LookupResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessLinesAsLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessLinesAsLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" minOccurs="0" name="GetBusinessLinesAsLookupResult" nillable="true" type="q5:LookupResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeSexGroupsAsLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAgeSexGroupsAsLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" minOccurs="0" name="GetAgeSexGroupsAsLookupResult" nillable="true" type="q6:LookupResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupplierTypesAsLookup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSupplierTypesAsLookupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Pars.Util.Puma.Service" minOccurs="0" name="GetSupplierTypesAsLookupResult" nillable="true" type="q7:LookupResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

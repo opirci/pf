@@ -1,0 +1,9 @@
+﻿<section>
+    Add todo:
+    <todo-input (onTodo)="addTodo($event)"></todo-input>
+</section>
+<section>
+    <h4 *ngIf="todos.getAll().length">Todo list</h4>
+    <todo-item *ngFor="let todo of todos.getAll()" [todo]="todo"></todo-item>
+</section>
+<ng-content select="app-footer"></ng-content>

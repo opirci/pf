@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{515D1DD5-8B63-43E3-AE7C-BF414A4D8619}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pars.Util.Puma.Data</RootNamespace>
+    <AssemblyName>Pars.Util.Puma.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Pars.EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Pars.EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Common.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Logging.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.EnterpriseLibrary.Validation.1.0.0\lib\net45\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Practices.ServiceLocation.1.0.0\lib\net45\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Unity.1.0.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tema.Unity.1.0.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pars.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f2de0b65b2a84c0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pars.Core.1.1.109\lib\net451\Pars.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pars.Core.Caching.Redis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pars.Core.Caching.Redis.1.1.6\lib\net451\Pars.Core.Caching.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Pars.Core.Data">
+      <HintPath>..\packages\Pars.Core.Data.1.1.73\lib\net45\Pars.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pars.Core.Caching.Redis.1.1.6\lib\net451\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\SupplyChain\tb_AgeSexGroup.cs" />
+    <Compile Include="Entity\SupplyChain\tb_BusinessLine.cs" />
+    <Compile Include="Entity\SupplyChain\tb_Country.cs" />
+    <Compile Include="Entity\SupplyChain\tb_Party.cs" />
+    <Compile Include="Entity\SupplyChain\tb_PartyPerson.cs" />
+    <Compile Include="Entity\SupplyChain\tb_PartyType.cs" />
+    <Compile Include="Entity\SupplyChain\tb_PartyType_Locale.cs" />
+    <Compile Include="Entity\SupplyChain\tb_Segment.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SegmentBusinessLineRelation.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SegmentSubSegmentRelation.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SubSegment.cs" />
+    <Compile Include="Entity\SupplyChain\tb_Supplier.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SupplierAgeSexGroups.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SupplierBusinessLines.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SupplierSubSegments.cs" />
+    <Compile Include="Entity\SupplyChain\tb_SupplierType.cs" />
+    <Compile Include="Entity\SupplyChain\tb_UserParty.cs" />
+    <Compile Include="Entity\tb_ConfigurationContext.cs" />
+    <Compile Include="Entity\tb_ConfigurationItem.cs" />
+    <Compile Include="Entity\tb_ConfigurationKey.cs" />
+    <Compile Include="Entity\tb_Database.cs" />
+    <Compile Include="Entity\tb_Server.cs" />
+    <Compile Include="Entity\tb_Table.cs" />
+    <Compile Include="Entity\tb_TableColumn.cs" />
+    <Compile Include="Entity\tb_UserLogonLog.cs" />
+    <Compile Include="Repository\ConfigurationRepository.cs" />
+    <Compile Include="Repository\DataLocalizerRepository.cs" />
+    <Compile Include="Repository\Extensions.cs" />
+    <Compile Include="IPumaContext.cs" />
+    <Compile Include="IPumaUnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PumaContext.cs" />
+    <Compile Include="Entity\tb_Application.cs" />
+    <Compile Include="Entity\tb_ApplicationMenu.cs" />
+    <Compile Include="Entity\tb_Application_Locale.cs" />
+    <Compile Include="Entity\tb_AuthorizationDefinition.cs" />
+    <Compile Include="Entity\tb_AuthorizationGroup.cs" />
+    <Compile Include="Entity\tb_AuthorizationGroupUser.cs" />
+    <Compile Include="Entity\tb_Claim.cs" />
+    <Compile Include="Entity\tb_Claim_Locale.cs" />
+    <Compile Include="Entity\tb_Entity.cs" />
+    <Compile Include="Entity\tb_EntityState.cs" />
+    <Compile Include="Entity\tb_EntityStateGroup.cs" />
+    <Compile Include="Entity\tb_EntityStateGroupItem.cs" />
+    <Compile Include="Entity\tb_EntityState_Locale.cs" />
+    <Compile Include="Entity\tb_Environment.cs" />
+    <Compile Include="Entity\tb_Language.cs" />
+    <Compile Include="Entity\tb_Language_Locale.cs" />
+    <Compile Include="Entity\tb_LogonState.cs" />
+    <Compile Include="Entity\tb_LogonState_Locale.cs" />
+    <Compile Include="Entity\tb_MembershipDefinition.cs" />
+    <Compile Include="Entity\tb_MemberState.cs" />
+    <Compile Include="Entity\tb_MemberState_Locale.cs" />
+    <Compile Include="Entity\tb_Menu.cs" />
+    <Compile Include="Entity\tb_MenuAction.cs" />
+    <Compile Include="Entity\tb_MenuActionParam.cs" />
+    <Compile Include="Entity\tb_MenuItem.cs" />
+    <Compile Include="Entity\tb_MenuItemActionSecurityGroup.cs" />
+    <Compile Include="Entity\tb_MenuItemActionSecurityGroupClaim.cs" />
+    <Compile Include="Entity\tb_MenuItemClaim.cs" />
+    <Compile Include="Entity\tb_MenuItemProperty.cs" />
+    <Compile Include="Entity\tb_MenuItemRole.cs" />
+    <Compile Include="Entity\tb_MenuItemType.cs" />
+    <Compile Include="Entity\tb_MenuItemType_Locale.cs" />
+    <Compile Include="Entity\tb_MenuItemUser.cs" />
+    <Compile Include="Entity\tb_MenuItemUserGroup.cs" />
+    <Compile Include="Entity\tb_MenuItem_Locale.cs" />
+    <Compile Include="Entity\tb_MenuType.cs" />
+    <Compile Include="Entity\tb_MenuType_Locale.cs" />
+    <Compile Include="Entity\tb_Menu_Locale.cs" />
+    <Compile Include="Entity\tb_PwdState.cs" />
+    <Compile Include="Entity\tb_PwdState_Locale.cs" />
+    <Compile Include="Entity\tb_Role.cs" />
+    <Compile Include="Entity\tb_RoleEditAuthorization.cs" />
+    <Compile Include="Entity\tb_RoleItem.cs" />
+    <Compile Include="Entity\tb_Role_Locale.cs" />
+    <Compile Include="Entity\tb_User.cs" />
+    <Compile Include="Entity\tb_UserClaim.cs" />
+    <Compile Include="Entity\tb_UserCompany.cs" />
+    <Compile Include="Entity\tb_UserEnvironment.cs" />
+    <Compile Include="Entity\tb_UserGroup.cs" />
+    <Compile Include="Entity\tb_UserGroupClaim.cs" />
+    <Compile Include="Entity\tb_UserGroupItem.cs" />
+    <Compile Include="Entity\tb_UserGroupRole.cs" />
+    <Compile Include="Entity\tb_UserGroup_Locale.cs" />
+    <Compile Include="Entity\tb_UserLogon.cs" />
+    <Compile Include="Entity\tb_UserMail.cs" />
+    <Compile Include="Entity\tb_UserRole.cs" />
+    <Compile Include="Entity\tb_UserSetting.cs" />
+    <Compile Include="Entity\tb_UserType.cs" />
+    <Compile Include="Entity\tb_UserType_Locale.cs" />
+    <Compile Include="PumaUnitOfWork.cs" />
+    <Compile Include="Repository\ClaimRepository.cs" />
+    <Compile Include="Repository\DefinitionRepository.cs" />
+    <Compile Include="Repository\DefinitionRepositoryInternal.cs" />
+    <Compile Include="Repository\Interface\IConfigurationRepository.cs" />
+    <Compile Include="Repository\Interface\IDataLocalizerRepository.cs" />
+    <Compile Include="Repository\Interface\IDefinitionRepository.cs" />
+    <Compile Include="Repository\Interface\IClaimRepository.cs" />
+    <Compile Include="Repository\Interface\IRoleRepository.cs" />
+    <Compile Include="Repository\Interface\ISupplierRepository.cs" />
+    <Compile Include="Repository\Interface\IUserRepository.cs" />
+    <Compile Include="Repository\RoleRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\Interface\IUserGroupRepository.cs" />
+    <Compile Include="Repository\UserGroupRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Compile Include="CacheHelper.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pars.Util.Puma.Domain\Pars.Util.Puma.Domain.csproj">
+      <Project>{160bb44c-a974-48ef-b9bd-d9a3138998d0}</Project>
+      <Name>Pars.Util.Puma.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+﻿<div [class.completed]="todo.completed">
+    <input type="checkbox"
+           [(ngModel)]="todo.completed"
+           (change)="completionChanged(todo)">
+    {{todo.title}}
+</div>
